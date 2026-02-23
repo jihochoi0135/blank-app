@@ -593,18 +593,7 @@ elif "➕ 선수 추가" in page:
             if st.button(role, key=f"a_role__{role}", use_container_width=True, type="primary" if active else "secondary"):
                 a_toggle_single("a_role", role); st.rerun()
 
-    # Card type
-    st.markdown('<div class="flabel">카드 종류 *</div>', unsafe_allow_html=True)
-    atycols = st.columns(3)
-    for i, (opt,(ac,tc)) in enumerate(TYPE_CFG.items()):
-        active = st.session_state["a_type"] == opt
-        bg = ac if active else "#1e2230"
-        fg = tc if active else "#9aa0b0"
-        bdr = f"2px solid {ac}" if active else "1px solid #2a2f3d"
-        with atycols[i]:
-            st.markdown(f'''<div style="background:{bg};color:{fg};border:{bdr};border-radius:6px;padding:9px 0;text-align:center;font-weight:700;font-size:14px;margin-bottom:-3px;">{opt}</div>''', unsafe_allow_html=True)
-            if st.button("​", key=f"a_type__{opt}", use_container_width=True):
-                a_toggle_single("a_type", opt); st.rerun()
+    card_type_row("카드 종류 *", "a_type", "a")
 
     add_year = st.text_input("연도 (골글·시그)", placeholder="예: 22, 96, 08", key="a_year_input")
 
@@ -720,18 +709,7 @@ elif "✏️ 선수 편집" in page:
                 if st.button(role, key=f"e_role__{role}__{gidx}", use_container_width=True, type="primary" if active else "secondary"):
                     e_single("e_role", role); st.rerun()
 
-        # Card type
-        st.markdown('<div class="flabel">카드 종류</div>', unsafe_allow_html=True)
-        etycols = st.columns(3)
-        for i, (opt,(ac,tc)) in enumerate(TYPE_CFG.items()):
-            active = st.session_state["e_type"] == opt
-            bg = ac if active else "#1e2230"
-            fg = tc if active else "#9aa0b0"
-            bdr = f"2px solid {ac}" if active else "1px solid #2a2f3d"
-            with etycols[i]:
-                st.markdown(f'''<div style="background:{bg};color:{fg};border:{bdr};border-radius:6px;padding:9px 0;text-align:center;font-weight:700;font-size:14px;margin-bottom:-3px;">{opt}</div>''', unsafe_allow_html=True)
-                if st.button("​", key=f"e_type__{opt}__{gidx}", use_container_width=True):
-                    e_single("e_type", opt); st.rerun()
+        card_type_row("카드 종류", "e_type", f"e{gidx}")
 
         e_year = st.text_input("연도 (골글·시그)", value=str(sel.get("year") or ""), placeholder="예: 22, 96, 08", key=f"e_year_{gidx}")
 

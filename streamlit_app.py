@@ -66,10 +66,10 @@ DATA_FILE = Path("pitcher_data.json")
 PITCH_TYPES = ["포심","투심","체인지업","서클체인지업","슬라이더","커브","커터","싱커","포크","스플리터"]
 TEAMS = ["삼성","기아","KT","한화","LG","SSG","키움","롯데","NC","두산"]
 ROLES = ["선발","중계","마무리"]
-IMPAC_TYPES = ["우에","좌에","여사","가사","당쇠","구조대","베테랑","국에","탑","구마",
-               "얼리","베포","분메","파볼","저니맨","키플","백노","난세","죄에","라이브",
+IMPAC_TYPES = ["우에","좌에","여사","가사","당쇠","구조대","베테랑","탑","구마",
+               "얼리","베포","분메","파볼","저니맨","키플","백노","난세","죄에",
                "전천후","마무리","FA","올","중계","느미"]
-TYPE_CFG = {"골글":("#c9a227","black"), "시그":("#dc2626","white"), "임팩":("#16a34a","white")}
+TYPE_CFG = {"골글":("#c9a227","black"), "시그":("#dc2626","white"), "임팩":("#16a34a","white"), "국대":("#2563eb","white"), "라이브":("#e8eaf0","black")}
 
 # ── Data ───────────────────────────────────────────────────────────────────────
 def default_data():
@@ -97,7 +97,7 @@ def default_data():
         {"team":"삼성","role":"중계","raw_prefix":"키플","name":"권오준","pitches":["포심","서클체인지업","슬라이더","커브","싱커"]},
         {"team":"삼성","role":"중계","raw_prefix":"여사","name":"우규민","pitches":["포심","투심","체인지업","슬라이더","커브"]},
         {"team":"삼성","role":"중계","raw_prefix":"구마","name":"심창민","pitches":["포심","체인지업","슬라이더","커브","싱커"]},
-        {"team":"삼성","role":"중계","raw_prefix":"국에","name":"최충연","pitches":["포심","슬라이더","커브","포크"]},
+        {"team":"삼성","role":"중계","raw_prefix":"국대","name":"최충연","pitches":["포심","슬라이더","커브","포크"]},
         {"team":"삼성","role":"마무리","raw_prefix":"여사","name":"오승환","pitches":["포심","투심","체인지업","슬라이더","커브"]},
         {"team":"기아","role":"선발","raw_prefix":"우에","name":"선동열","pitches":["포심","체인지업","슬라이더","커브","포크"]},
         {"team":"기아","role":"선발","raw_prefix":"여사","name":"윤석민","pitches":["포심","체인지업","슬라이더","커브","포크"]},
@@ -110,7 +110,7 @@ def default_data():
         {"team":"기아","role":"중계","raw_prefix":"00","name":"오봉옥","pitches":["포심","슬라이더","커브","포크"]},
         {"team":"기아","role":"중계","raw_prefix":"당쇠","name":"임기영","pitches":["포심","서클체인지업","슬라이더","싱커"]},
         {"team":"기아","role":"중계","raw_prefix":"당쇠","name":"송유석","pitches":["포심","투심","슬라이더","커브"]},
-        {"team":"기아","role":"중계","raw_prefix":"국에","name":"최지민","pitches":["포심","체인지업","슬라이더"]},
+        {"team":"기아","role":"중계","raw_prefix":"국대","name":"최지민","pitches":["포심","체인지업","슬라이더"]},
         {"team":"기아","role":"마무리","raw_prefix":"여사","name":"한기주","pitches":["포심","투심","체인지업","슬라이더","커브"]},
         {"team":"KT","role":"선발","raw_prefix":"22","name":"엄상백","pitches":["포심","체인지업","슬라이더"]},
         {"team":"KT","role":"선발","raw_prefix":"분메","name":"쿠에바스","pitches":["포심","투심","체인지업","슬라이더","커터"]},
@@ -127,7 +127,7 @@ def default_data():
         {"team":"KT","role":"중계","raw_prefix":"얼리","name":"손동현","pitches":["포심","슬라이더","커브","포크"]},
         {"team":"KT","role":"중계","raw_prefix":"가사","name":"손동현","pitches":["포심","슬라이더","스플리터"]},
         {"team":"KT","role":"중계","raw_prefix":"당쇠","name":"주권","pitches":["포심","체인지업","커브","싱커"]},
-        {"team":"KT","role":"중계","raw_prefix":"국에","name":"심재민","pitches":["포심","체인지업","슬라이더","커브"]},
+        {"team":"KT","role":"중계","raw_prefix":"국대","name":"심재민","pitches":["포심","체인지업","슬라이더","커브"]},
         {"team":"KT","role":"마무리","raw_prefix":"구마","name":"김재윤","pitches":["포심","투심","슬라이더","커브","스플리터"]},
         {"team":"KT","role":"마무리","raw_prefix":"마무리","name":"김재윤","pitches":["포심","슬라이더","스플리터"]},
         {"team":"KT","role":"마무리","raw_prefix":"여사","name":"박영현","pitches":["포심","체인지업","슬라이더"]},
@@ -144,7 +144,7 @@ def default_data():
         {"team":"한화","role":"중계","raw_prefix":"15","name":"박정진","pitches":["포심","체인지업","슬라이더","커브","포크"]},
         {"team":"한화","role":"중계","raw_prefix":"18","name":"이태양","pitches":["포심","슬라이더","커브","포크"]},
         {"team":"한화","role":"중계","raw_prefix":"20","name":"윤대경","pitches":["포심","체인지업","슬라이더","커브","포크"]},
-        {"team":"한화","role":"중계","raw_prefix":"국에","name":"김서현","pitches":["포심","체인지업","슬라이더"]},
+        {"team":"한화","role":"중계","raw_prefix":"국대","name":"김서현","pitches":["포심","체인지업","슬라이더"]},
         {"team":"한화","role":"마무리","raw_prefix":"가사","name":"구대성","pitches":["포심","체인지업","슬라이더","커브","싱커"]},
         {"team":"LG","role":"선발","raw_prefix":"탑","name":"임찬규","pitches":["포심","체인지업","슬라이더","커브","커터"]},
         {"team":"LG","role":"선발","raw_prefix":"22","name":"플렉슨","pitches":["포심","서클체인지업","슬라이더","커브","커터"]},
@@ -160,7 +160,7 @@ def default_data():
         {"team":"LG","role":"중계","raw_prefix":"가사","name":"에르난데스","pitches":["포심","체인지업","슬라이더","커브","커터"]},
         {"team":"LG","role":"중계","raw_prefix":"구마","name":"정우영","pitches":["슬라이더","포크","커터","싱커"]},
         {"team":"LG","role":"중계","raw_prefix":"전천후","name":"우규민","pitches":["포심","체인지업","슬라이더","커브","싱커"]},
-        {"team":"LG","role":"중계","raw_prefix":"국에","name":"유원상","pitches":["포심","슬라이더","커브","포크"]},
+        {"team":"LG","role":"중계","raw_prefix":"국대","name":"유원상","pitches":["포심","슬라이더","커브","포크"]},
         {"team":"LG","role":"마무리","raw_prefix":"마무리","name":"김용수","pitches":["포심","체인지업","슬라이더","커브","스플리터"]},
         {"team":"SSG","role":"선발","raw_prefix":"22","name":"김광현","pitches":["포심","서클체인지업","슬라이더","커브","스플리터"]},
         {"team":"SSG","role":"선발","raw_prefix":"08","name":"김광현","pitches":["포심","체인지업","슬라이더","포크","커터"]},
@@ -175,7 +175,7 @@ def default_data():
         {"team":"SSG","role":"중계","raw_prefix":"여사","name":"김현욱","pitches":["포심","서클체인지업","커브","싱커"]},
         {"team":"SSG","role":"중계","raw_prefix":"가사","name":"송은범","pitches":["포심","체인지업","슬라이더","커브"]},
         {"team":"SSG","role":"중계","raw_prefix":"백노","name":"노경은","pitches":["포심","투심","슬라이더","커브","포크"]},
-        {"team":"SSG","role":"중계","raw_prefix":"국에","name":"오상민","pitches":["포심","체인지업","슬라이더","커브"]},
+        {"team":"SSG","role":"중계","raw_prefix":"국대","name":"오상민","pitches":["포심","체인지업","슬라이더","커브"]},
         {"team":"SSG","role":"중계","raw_prefix":"전천후","name":"김원형","pitches":["포심","서클체인지업","커브","포크","싱커"]},
         {"team":"SSG","role":"마무리","raw_prefix":"07","name":"정대현","pitches":["포심","슬라이더","커브","싱커"]},
         {"team":"키움","role":"선발","raw_prefix":"98","name":"김수경","pitches":["포심","체인지업","슬라이더","커브","포크"]},
@@ -189,14 +189,14 @@ def default_data():
         {"team":"키움","role":"선발","raw_prefix":"백노","name":"나이트","pitches":["포심","체인지업","슬라이더","커브","싱커"]},
         {"team":"키움","role":"선발","raw_prefix":"좌에","name":"밴헤켄","pitches":["포심","체인지업","슬라이더","커브","포크"]},
         {"team":"키움","role":"중계","raw_prefix":"베포","name":"한현희","pitches":["포심","투심","서클체인지업","슬라이더"]},
-        {"team":"키움","role":"중계","raw_prefix":"국에","name":"한현희","pitches":["포심","체인지업","서클체인지업","슬라이더","싱커"]},
+        {"team":"키움","role":"중계","raw_prefix":"국대","name":"한현희","pitches":["포심","체인지업","서클체인지업","슬라이더","싱커"]},
         {"team":"키움","role":"중계","raw_prefix":"14","name":"조상우","pitches":["포심","투심","체인지업","슬라이더","커브"]},
         {"team":"키움","role":"중계","raw_prefix":"구조대","name":"조웅천","pitches":["포심","체인지업","슬라이더","커브","싱커"]},
         {"team":"키움","role":"중계","raw_prefix":"당쇠","name":"신완근","pitches":["포심","체인지업","슬라이더","커브"]},
         {"team":"키움","role":"중계","raw_prefix":"여사","name":"김재웅","pitches":["포심","체인지업","슬라이더","커브"]},
         {"team":"키움","role":"중계","raw_prefix":"여사","name":"김성민","pitches":["투심","체인지업","슬라이더","커브"]},
         {"team":"키움","role":"중계","raw_prefix":"06","name":"신철인","pitches":["포심","체인지업","슬라이더","커브"]},
-        {"team":"키움","role":"중계","raw_prefix":"국에","name":"조규제","pitches":["포심","체인지업","슬라이더","커브"]},
+        {"team":"키움","role":"중계","raw_prefix":"국대","name":"조규제","pitches":["포심","체인지업","슬라이더","커브"]},
         {"team":"키움","role":"마무리","raw_prefix":"가사","name":"조용준","pitches":["포심","체인지업","슬라이더","커브","포크"]},
         {"team":"키움","role":"마무리","raw_prefix":"여사","name":"위재영","pitches":["포심","체인지업","슬라이더","커브","포크"]},
         {"team":"키움","role":"마무리","raw_prefix":"06","name":"박승민","pitches":["포심","체인지업","슬라이더","커브","싱커"]},
@@ -216,7 +216,7 @@ def default_data():
         {"team":"롯데","role":"중계","raw_prefix":"22","name":"나균안","pitches":["포심","슬라이더","커브","포크","커터"]},
         {"team":"롯데","role":"중계","raw_prefix":"가사","name":"강상수","pitches":["포심","체인지업","서클체인지업","슬라이더","커브"]},
         {"team":"롯데","role":"중계","raw_prefix":"FA","name":"정대현","pitches":["포심","슬라이더","커브","싱커"]},
-        {"team":"롯데","role":"중계","raw_prefix":"국에","name":"김진욱","pitches":["포심","슬라이더","커브"]},
+        {"team":"롯데","role":"중계","raw_prefix":"국대","name":"김진욱","pitches":["포심","슬라이더","커브"]},
         {"team":"롯데","role":"마무리","raw_prefix":"여사","name":"손승락","pitches":["포심","투심","슬라이더","커터"]},
         {"team":"롯데","role":"마무리","raw_prefix":"얼리","name":"김원중","pitches":["포심","슬라이더","커브","포크"]},
         {"team":"NC","role":"선발","raw_prefix":"우에","name":"페디","pitches":["체인지업","슬라이더","커브","커터","싱커"]},
@@ -231,7 +231,7 @@ def default_data():
         {"team":"NC","role":"중계","raw_prefix":"16","name":"원종현","pitches":["포심","투심","체인지업","슬라이더","커브"]},
         {"team":"NC","role":"중계","raw_prefix":"23","name":"류진욱","pitches":["포심","슬라이더","커터","스플리터"]},
         {"team":"NC","role":"중계","raw_prefix":"구마","name":"박진우","pitches":["포심","투심","체인지업","슬라이더","싱커"]},
-        {"team":"NC","role":"중계","raw_prefix":"국에","name":"이민호","pitches":["포심","슬라이더","스플리터"]},
+        {"team":"NC","role":"중계","raw_prefix":"국대","name":"이민호","pitches":["포심","슬라이더","스플리터"]},
         {"team":"NC","role":"마무리","raw_prefix":"22","name":"이용찬","pitches":["포심","슬라이더","커브","포크"]},
         {"team":"NC","role":"마무리","raw_prefix":"탑","name":"류진욱","pitches":["포심","슬라이더","포크","커터"]},
         {"team":"두산","role":"선발","raw_prefix":"좌에","name":"미란다","pitches":["포심","체인지업","슬라이더","포크"]},
@@ -249,7 +249,7 @@ def default_data():
         {"team":"두산","role":"중계","raw_prefix":"11","name":"정재훈","pitches":["포심","체인지업","슬라이더","포크"]},
         {"team":"두산","role":"중계","raw_prefix":"구마","name":"박치국","pitches":["포심","투심","체인지업","슬라이더","커브"]},
         {"team":"두산","role":"중계","raw_prefix":"구조대","name":"고창성","pitches":["포심","체인지업","커브","포크","싱커"]},
-        {"team":"두산","role":"중계","raw_prefix":"국에","name":"정철원","pitches":["포심","슬라이더","커브","스플리터"]},
+        {"team":"두산","role":"중계","raw_prefix":"국대","name":"정철원","pitches":["포심","슬라이더","커브","스플리터"]},
         {"team":"두산","role":"중계","raw_prefix":"여사","name":"김강률","pitches":["포심","슬라이더","커브","포크"]},
         {"team":"두산","role":"중계","raw_prefix":"당쇠","name":"이용호","pitches":["포심","체인지업","서클체인지업","슬라이더","커브"]},
         {"team":"두산","role":"중계","raw_prefix":"당쇠","name":"장호연","pitches":["포심","체인지업","슬라이더","커브","스플리터"]},
@@ -267,6 +267,10 @@ def default_data():
         kw = (korean or latin or [""])[0]
         if prefix == "골":
             p["player_type"] = "골글"; p["year"] = None; p["impac_type"] = None
+        elif kw == "국대":
+            p["player_type"] = "국대"; p["year"] = None; p["impac_type"] = None
+        elif kw == "라이브":
+            p["player_type"] = "라이브"; p["year"] = None; p["impac_type"] = None
         elif nums:
             p["player_type"] = "시그"; p["year"] = nums[0]
             p["impac_type"] = korean[0] if korean and korean[0] in IMPAC_KW else None
@@ -289,6 +293,14 @@ def _migrate(data):
         if p.get("team") == "골글":
             p["team"] = "삼성"
             p["player_type"] = "골글"
+        # Convert 국에 impac → 국대 card type
+        if p.get("impac_type") == "국에" or p.get("player_type") == "임팩" and p.get("impac_type") == "국에":
+            p["player_type"] = "국대"
+            p["impac_type"] = None
+        # Convert 라이브 impac → 라이브 card type
+        if p.get("impac_type") == "라이브":
+            p["player_type"] = "라이브"
+            p["impac_type"] = None
     return data
 
 def save_data(data):
@@ -428,7 +440,7 @@ st.markdown("""<div class="header-banner"><h1>컴투스 프로야구 V26</h1><p>
 def card_type_row(label, state_key, key_prefix, impac_reset_key=None):
     """Card type: button + colored underline bar. Works for search (set) and add/edit (str)."""
     st.markdown(f'<div class="flabel">{label}</div>', unsafe_allow_html=True)
-    cols = st.columns(3)
+    cols = st.columns(len(TYPE_CFG))
     for i, (opt, (ac, tc)) in enumerate(TYPE_CFG.items()):
         is_active = (opt in st.session_state[state_key]) if isinstance(st.session_state[state_key], set) else (st.session_state[state_key] == opt)
         with cols[i]:

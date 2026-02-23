@@ -1,6 +1,8 @@
 import streamlit as st
 import json
 import re
+import base64
+import requests
 from pathlib import Path
 
 st.set_page_config(page_title="V26 구종 데이터베이스", page_icon="⚾", layout="wide")
@@ -274,8 +276,44 @@ def default_data():
             p["player_type"] = "시그"; p["year"] = None; p["impac_type"] = None
     return raw
 
+def _gh_cfg():
+    """Return GitHub config from st.secrets or None if not configured."""
+    try:
+        cfg = st.secrets["github"]
+        return cfg["token"], cfg["repo"], cfg.get("branch","main"), cfg.get("filepath","pitcher_data.json")
+    except Exception:
+        return None, None, None, None
+
+def _migrate(data):
+    for p in data:
+        if p.get("team") == "골글":
+            p["team"] = "삼성"
+            p["player_type"] = "골글"
+    return data
+
 def save_data(data):
-    # Try app directory first, fall back to /tmp for read-only filesystems (e.g. Streamlit Cloud)
+    token, repo, branch, filepath = _gh_cfg()
+
+    # ── GitHub save ──
+    if token and repo:
+        url = f"https://api.github.com/repos/{repo}/contents/{filepath}"
+        headers = {"Authorization": f"token {token}", "Accept": "application/vnd.github.v3+json"}
+        payload = json.dumps(data, ensure_ascii=False, indent=2)
+        encoded = base64.b64encode(payload.encode()).decode()
+        # Get current SHA (needed to update existing file)
+        sha = None
+        r = requests.get(url, headers=headers, params={"ref": branch})
+        if r.status_code == 200:
+            sha = r.json().get("sha")
+        body = {"message": "Update pitcher data", "content": encoded, "branch": branch}
+        if sha:
+            body["sha"] = sha
+        r = requests.put(url, headers=headers, json=body)
+        if r.status_code in (200, 201):
+            return  # success
+        # fall through to local on failure
+
+    # ── Local fallback ──
     for path in [DATA_FILE, Path("/tmp/pitcher_data.json")]:
         try:
             with open(path, "w", encoding="utf-8") as f:
@@ -285,17 +323,26 @@ def save_data(data):
             continue
 
 def load_data():
-    # Check /tmp first (runtime saves), then app directory, then default
+    token, repo, branch, filepath = _gh_cfg()
+
+    # ── GitHub load ──
+    if token and repo:
+        url = f"https://api.github.com/repos/{repo}/contents/{filepath}"
+        headers = {"Authorization": f"token {token}", "Accept": "application/vnd.github.v3+json"}
+        r = requests.get(url, headers=headers, params={"ref": branch})
+        if r.status_code == 200:
+            try:
+                raw = base64.b64decode(r.json()["content"]).decode()
+                return _migrate(json.loads(raw))
+            except Exception:
+                pass
+
+    # ── Local fallback ──
     for path in [Path("/tmp/pitcher_data.json"), DATA_FILE]:
         if path.exists():
             try:
                 with open(path) as f:
-                    d = json.load(f)
-                for p in d:
-                    if p.get("team") == "골글":
-                        p["team"] = "삼성"
-                        p["player_type"] = "골글"
-                return d
+                    return _migrate(json.load(f))
             except Exception:
                 continue
     return default_data()

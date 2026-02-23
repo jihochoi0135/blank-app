@@ -30,6 +30,8 @@ h1,h2,h3 { font-family:'Bebas Neue','Noto Sans KR',sans-serif; letter-spacing:2p
 .stTextInput>div>input,.stSelectbox>div,.stMultiSelect>div { background-color:var(--surface2)!important; border-color:var(--border)!important; color:var(--text)!important; }
 hr { border-color:var(--border); }
 
+
+
 /* Card type colored buttons - inject via JS-based class trick not available,
    so we use streamlit's built-in primary/secondary and override colors inline */
 button[data-testid*="골글"], button[data-testid*="시그"], button[data-testid*="임팩"] {
@@ -63,7 +65,7 @@ PITCH_TYPES = ["포심","투심","체인지업","서클체인지업","슬라이�
 TEAMS = ["삼성","기아","KT","한화","LG","SSG","키움","롯데","NC","두산"]
 ROLES = ["선발","중계","마무리"]
 IMPAC_TYPES = ["우에","좌에","여사","가사","당쇠","구조대","베테랑","국에","탑","구마",
-               "얼리","베포","분메","파볼","저니맨","키플","백노","난세","라이브",
+               "얼리","베포","분메","파볼","저니맨","키플","백노","난세","죄에","라이브",
                "전천후","마무리","FA","올","중계","느미"]
 TYPE_CFG = {"골글":("#c9a227","black"), "시그":("#dc2626","white"), "임팩":("#16a34a","white")}
 
@@ -97,7 +99,7 @@ def default_data():
         {"team":"삼성","role":"마무리","raw_prefix":"여사","name":"오승환","pitches":["포심","투심","체인지업","슬라이더","커브"]},
         {"team":"기아","role":"선발","raw_prefix":"우에","name":"선동열","pitches":["포심","체인지업","슬라이더","커브","포크"]},
         {"team":"기아","role":"선발","raw_prefix":"여사","name":"윤석민","pitches":["포심","체인지업","슬라이더","커브","포크"]},
-        {"team":"기아","role":"선발","raw_prefix":"좌에","name":"양현종","pitches":["포심","체인지업","서클체인지업","슬라이더","커브"]},
+        {"team":"기아","role":"선발","raw_prefix":"죄에","name":"양현종","pitches":["포심","체인지업","서클체인지업","슬라이더","커브"]},
         {"team":"기아","role":"선발","raw_prefix":"20","name":"브룩스","pitches":["포심","투심","체인지업","슬라이더","커브"]},
         {"team":"기아","role":"선발","raw_prefix":"25","name":"네일","pitches":["투심","체인지업","슬라이더","커터"]},
         {"team":"기아","role":"선발","raw_prefix":"91","name":"이강철","pitches":["포심","체인지업","슬라이더","커브","싱커"]},
@@ -181,7 +183,7 @@ def default_data():
         {"team":"키움","role":"선발","raw_prefix":"우에","name":"장명부","pitches":["포심","체인지업","슬라이더","커브","싱커"]},
         {"team":"키움","role":"선발","raw_prefix":"우에","name":"박정현","pitches":["포심","체인지업","슬라이더","커브","싱커"]},
         {"team":"키움","role":"선발","raw_prefix":"난세","name":"후라도","pitches":["포심","체인지업","커브","커터","싱커"]},
-        {"team":"키움","role":"선발","raw_prefix":"좌에","name":"최창호","pitches":["포심","투심","슬라이더","커브","포크"]},
+        {"team":"키움","role":"선발","raw_prefix":"죄에","name":"최창호","pitches":["포심","투심","슬라이더","커브","포크"]},
         {"team":"키움","role":"선발","raw_prefix":"백노","name":"나이트","pitches":["포심","체인지업","슬라이더","커브","싱커"]},
         {"team":"키움","role":"선발","raw_prefix":"좌에","name":"밴헤켄","pitches":["포심","체인지업","슬라이더","커브","포크"]},
         {"team":"키움","role":"중계","raw_prefix":"베포","name":"한현희","pitches":["포심","투심","서클체인지업","슬라이더"]},
@@ -306,7 +308,8 @@ def pitch_badge(pitch):
     return f'<span class="pitch-badge pitch-{pitch}">{pitch}</span>'
 
 def player_card_html(p):
-    pitches_html = "".join(pitch_badge(pt) for pt in p.get("pitches", []))
+    ordered = sorted(p.get("pitches", []), key=lambda x: PITCH_TYPES.index(x) if x in PITCH_TYPES else 99)
+    pitches_html = "".join(pitch_badge(pt) for pt in ordered)
     ptype = p.get("player_type","")
     bg, fg = TYPE_CFG.get(ptype, ("#374151","#d1d5db"))
     type_b = f'<span class="pitch-badge" style="background:{bg};color:{fg};">{ptype}</span>'
@@ -376,97 +379,95 @@ st.markdown("""<div class="header-banner"><h1>컴투스 프로야구 V26</h1><p>
 # ── Pages ──────────────────────────────────────────────────────────────────────
 
 if "🔍 검색" in page:
-    # session state
     for k,d in [("s_team",set()),("s_role",set()),("s_type",set()),("s_impac",set())]:
         if k not in st.session_state: st.session_state[k] = d
+    if "s_sort" not in st.session_state: st.session_state["s_sort"] = "팀순"
 
     def s_toggle(key, val):
         s = st.session_state[key]
         s.discard(val) if val in s else s.add(val)
         st.session_state[key] = s
 
+    def flex_btn_row(label, options, state_key, multi=True, key_prefix=None):
+        """Render buttons 3–10 per row, active = primary (red), inactive = secondary."""
+        st.markdown(f'<div class="flabel">{label}</div>', unsafe_allow_html=True)
+        kp = key_prefix or state_key
+        n = min(10, max(3, len(options)))
+        chunks = [options[i:i+n] for i in range(0, len(options), n)]
+        for chunk in chunks:
+            cols = st.columns(len(chunk))
+            for j, opt in enumerate(chunk):
+                s = st.session_state[state_key]
+                active = (opt in s) if multi else (s == opt)
+                with cols[j]:
+                    if st.button(opt, key=f"{kp}__{opt}", use_container_width=True,
+                                 type="primary" if active else "secondary"):
+                        if multi: s_toggle(state_key, opt)
+                        else: st.session_state[state_key] = "" if active else opt
+                        st.rerun()
+
+    def card_type_row(state_key, key_prefix, impac_reset_key=None):
+        """Card type: button + colored underline bar to show which type & color."""
+        st.markdown('<div class="flabel">카드 종류</div>', unsafe_allow_html=True)
+        type_items = list(TYPE_CFG.items())
+        cols = st.columns(3)
+        for i, (opt, (ac, tc)) in enumerate(type_items):
+            is_active = (opt in st.session_state[state_key]) if isinstance(st.session_state[state_key], set) else (st.session_state[state_key] == opt)
+            with cols[i]:
+                if st.button(opt, key=f"{key_prefix}_type__{opt}", use_container_width=True,
+                             type="primary" if is_active else "secondary"):
+                    if isinstance(st.session_state[state_key], set):
+                        s_toggle(state_key, opt)
+                        if impac_reset_key and opt == "임팩" and "임팩" not in st.session_state[state_key]:
+                            st.session_state[impac_reset_key] = set()
+                    else:
+                        st.session_state[state_key] = "" if is_active else opt
+                    st.rerun()
+                # Colored underline bar shows the card type color
+                bar_color = ac if is_active else "transparent"
+                st.markdown(f'<div style="height:3px;background:{bar_color};border-radius:2px;margin-top:-8px;margin-bottom:4px;"></div>', unsafe_allow_html=True)
     search_name = st.text_input("🔎 선수명 검색", placeholder="이름 입력...")
     st.markdown("---")
 
-    # Team buttons
-    st.markdown('<div class="flabel">팀</div>', unsafe_allow_html=True)
-    tcols = st.columns(len(TEAMS))
-    for i, team in enumerate(TEAMS):
-        active = team in st.session_state["s_team"]
-        with tcols[i]:
-            if st.button(team, key=f"s_team__{team}", use_container_width=True, type="primary" if active else "secondary"):
-                s_toggle("s_team", team); st.rerun()
-    st.markdown("<div style='margin-bottom:6px'></div>", unsafe_allow_html=True)
+    flex_btn_row("팀", TEAMS, "s_team")
+    st.markdown("<div style='margin-bottom:4px'></div>", unsafe_allow_html=True)
 
-    # Role buttons
-    st.markdown('<div class="flabel">역할</div>', unsafe_allow_html=True)
-    rcols = st.columns(len(ROLES))
-    for i, role in enumerate(ROLES):
-        active = role in st.session_state["s_role"]
-        with rcols[i]:
-            if st.button(role, key=f"s_role__{role}", use_container_width=True, type="primary" if active else "secondary"):
-                s_toggle("s_role", role); st.rerun()
-    st.markdown("<div style='margin-bottom:6px'></div>", unsafe_allow_html=True)
+    flex_btn_row("역할", ROLES, "s_role")
+    st.markdown("<div style='margin-bottom:4px'></div>", unsafe_allow_html=True)
 
-    # Card type buttons - inject per-button CSS using unique wrapper + adjacent sibling
-    st.markdown('<div class="flabel">카드 종류</div>', unsafe_allow_html=True)
-    type_opts = list(TYPE_CFG.keys())
-    # Inject CSS for all 3 card type button colors based on active state
-    css_rules = ""
-    for opt, (ac, tc) in TYPE_CFG.items():
-        is_active = opt in st.session_state["s_type"]
-        if is_active:
-            css_rules += f'''
-            div.ctype-{opt.replace(" ","_")} button {{
-                background: {ac} !important; color: {tc} !important;
-                border: 2px solid {ac} !important; font-weight: 700 !important;
-            }}
-            div.ctype-{opt.replace(" ","_")} button:hover {{
-                background: {ac}cc !important;
-            }}
-            '''
-        else:
-            css_rules += f'''
-            div.ctype-{opt.replace(" ","_")} button {{
-                background: #1e2230 !important; color: #9aa0b0 !important;
-                border: 1px solid #2a2f3d !important; font-weight: 700 !important;
-            }}
-            '''
-    st.markdown(f"<style>{css_rules}</style>", unsafe_allow_html=True)
-    tycols = st.columns(len(type_opts))
-    for i, opt in enumerate(type_opts):
-        ac, tc = TYPE_CFG[opt]
-        with tycols[i]:
-            cls = f"ctype-{opt.replace(' ','_')}"
-            st.markdown(f'<div class="{cls}">', unsafe_allow_html=True)
-            if st.button(opt, key=f"s_type__{opt}", use_container_width=True):
-                s_toggle("s_type", opt); st.rerun()
-            st.markdown('</div>', unsafe_allow_html=True)
-    st.markdown("<div style='margin-bottom:6px'></div>", unsafe_allow_html=True)
+    card_type_row("s_type", "s", impac_reset_key="s_impac")
+    st.markdown("<div style='margin-bottom:4px'></div>", unsafe_allow_html=True)
 
-    # Impac buttons
-    st.markdown('<div class="flabel">임팩 종류</div>', unsafe_allow_html=True)
-    imp_n = 8
-    imp_chunks = [IMPAC_TYPES[i:i+imp_n] for i in range(0, len(IMPAC_TYPES), imp_n)]
-    for chunk in imp_chunks:
-        icols = st.columns(imp_n)
-        for j, opt in enumerate(chunk):
-            active = opt in st.session_state["s_impac"]
-            with icols[j]:
-                if st.button(opt, key=f"s_impac__{opt}", use_container_width=True, type="primary" if active else "secondary"):
-                    s_toggle("s_impac", opt); st.rerun()
-    st.markdown("<div style='margin-bottom:6px'></div>", unsafe_allow_html=True)
+    # Only show impac filter if 임팩 is selected (or nothing selected)
+    show_impac = not st.session_state["s_type"] or "임팩" in st.session_state["s_type"]
+    if show_impac:
+        flex_btn_row("임팩 종류", IMPAC_TYPES, "s_impac")
+        st.markdown("<div style='margin-bottom:4px'></div>", unsafe_allow_html=True)
+    elif st.session_state["s_impac"]:
+        st.session_state["s_impac"] = set()
 
     col5, col6 = st.columns([2,1])
     with col5:
         filter_pitches = st.multiselect("구종 포함", PITCH_TYPES)
     with col6:
-        filter_year = st.text_input("연도 (시그)", placeholder="예: 22")
+        filter_year = st.text_input("연도", placeholder="예: 22")
+
+    # Sort order
+    st.markdown('<div class="flabel">정렬 순서</div>', unsafe_allow_html=True)
+    sort_opts = ["팀순", "이름순", "카드종류순", "역할순"]
+    scols = st.columns(len(sort_opts))
+    for i, opt in enumerate(sort_opts):
+        active = st.session_state["s_sort"] == opt
+        with scols[i]:
+            if st.button(opt, key=f"s_sort__{opt}", use_container_width=True,
+                         type="primary" if active else "secondary"):
+                st.session_state["s_sort"] = opt; st.rerun()
+
     st.markdown("---")
 
     # Filter
     players = st.session_state.players
-    filtered = players
+    filtered = list(players)
     if search_name:
         filtered = [p for p in filtered if search_name in p["name"]]
     if st.session_state["s_team"]:
@@ -480,15 +481,33 @@ if "🔍 검색" in page:
     if filter_pitches:
         filtered = [p for p in filtered if all(pt in p.get("pitches",[]) for pt in filter_pitches)]
     if filter_year.strip():
-        yr = filter_year.strip()
-        filtered = [p for p in filtered if str(p.get("year") or "") == yr]
+        filtered = [p for p in filtered if str(p.get("year") or "") == filter_year.strip()]
+
+    # Sort
+    TEAM_ORDER = {t:i for i,t in enumerate(TEAMS)}
+    ROLE_ORDER = {"선발":0,"중계":1,"마무리":2}
+    TYPE_ORDER = {"골글":0,"시그":1,"임팩":2}
+    sort_key = st.session_state["s_sort"]
+    if sort_key == "팀순":
+        filtered.sort(key=lambda p: (TEAM_ORDER.get(p["team"],99), ROLE_ORDER.get(p["role"],99)))
+    elif sort_key == "이름순":
+        filtered.sort(key=lambda p: p["name"])
+    elif sort_key == "카드종류순":
+        filtered.sort(key=lambda p: (TYPE_ORDER.get(p.get("player_type",""),99), TEAM_ORDER.get(p["team"],99)))
+    elif sort_key == "역할순":
+        filtered.sort(key=lambda p: (ROLE_ORDER.get(p["role"],99), TEAM_ORDER.get(p["team"],99)))
 
     st.markdown(f'<div style="color:#5a6070;margin-bottom:16px;">검색 결과 <span style="color:#e8eaf0;font-weight:700;">{len(filtered)}</span>명</div>', unsafe_allow_html=True)
+
     if filtered:
-        for team in list(dict.fromkeys(p["team"] for p in filtered)):
-            tp = [p for p in filtered if p["team"] == team]
-            st.markdown(f'<div class="section-title">{team} <span class="count-chip">{len(tp)}</span></div>', unsafe_allow_html=True)
-            for p in tp:
+        if sort_key == "팀순":
+            for team in list(dict.fromkeys(p["team"] for p in filtered)):
+                tp = [p for p in filtered if p["team"] == team]
+                st.markdown(f'<div class="section-title">{team} <span class="count-chip">{len(tp)}</span></div>', unsafe_allow_html=True)
+                for p in tp:
+                    st.markdown(player_card_html(p), unsafe_allow_html=True)
+        else:
+            for p in filtered:
                 st.markdown(player_card_html(p), unsafe_allow_html=True)
     else:
         st.info("검색 결과가 없습니다.")
@@ -531,10 +550,12 @@ elif "➕ 선수 추가" in page:
     atycols = st.columns(3)
     for i, (opt,(ac,tc)) in enumerate(TYPE_CFG.items()):
         active = st.session_state["a_type"] == opt
-        bg = ac if active else "#1e2230"; fg = tc if active else "#9aa0b0"
+        bg = ac if active else "#1e2230"
+        fg = tc if active else "#9aa0b0"
+        bdr = f"2px solid {ac}" if active else "1px solid #2a2f3d"
         with atycols[i]:
-            st.markdown(f'<div style="background:{bg};color:{fg};border:{"2px solid "+ac if active else "1px solid #2a2f3d"};border-radius:6px;padding:8px;text-align:center;font-weight:700;font-size:14px;margin-bottom:4px">{opt}</div>', unsafe_allow_html=True)
-            if st.button("선택" if not active else "해제", key=f"a_type__{opt}", use_container_width=True):
+            st.markdown(f'''<div style="background:{bg};color:{fg};border:{bdr};border-radius:6px;padding:9px 0;text-align:center;font-weight:700;font-size:14px;margin-bottom:-3px;">{opt}</div>''', unsafe_allow_html=True)
+            if st.button("​", key=f"a_type__{opt}", use_container_width=True):
                 a_toggle_single("a_type", opt); st.rerun()
 
     add_year = st.text_input("연도 (골글·시그)", placeholder="예: 22, 96, 08", key="a_year_input")
@@ -653,21 +674,16 @@ elif "✏️ 선수 편집" in page:
 
         # Card type
         st.markdown('<div class="flabel">카드 종류</div>', unsafe_allow_html=True)
-        css_e = ""
-        for opt, (ac, tc) in TYPE_CFG.items():
-            is_active = st.session_state["e_type"] == opt
-            if is_active:
-                css_e += f"div.ectype-{opt} button {{ background:{ac}!important; color:{tc}!important; border:2px solid {ac}!important; font-weight:700!important; }}"
-            else:
-                css_e += f"div.ectype-{opt} button {{ background:#1e2230!important; color:#9aa0b0!important; border:1px solid #2a2f3d!important; font-weight:700!important; }}"
-        st.markdown(f"<style>{css_e}</style>", unsafe_allow_html=True)
         etycols = st.columns(3)
         for i, (opt,(ac,tc)) in enumerate(TYPE_CFG.items()):
+            active = st.session_state["e_type"] == opt
+            bg = ac if active else "#1e2230"
+            fg = tc if active else "#9aa0b0"
+            bdr = f"2px solid {ac}" if active else "1px solid #2a2f3d"
             with etycols[i]:
-                st.markdown(f'<div class="ectype-{opt}">', unsafe_allow_html=True)
-                if st.button(opt, key=f"e_type__{opt}__{gidx}", use_container_width=True):
+                st.markdown(f'''<div style="background:{bg};color:{fg};border:{bdr};border-radius:6px;padding:9px 0;text-align:center;font-weight:700;font-size:14px;margin-bottom:-3px;">{opt}</div>''', unsafe_allow_html=True)
+                if st.button("​", key=f"e_type__{opt}__{gidx}", use_container_width=True):
                     e_single("e_type", opt); st.rerun()
-                st.markdown('</div>', unsafe_allow_html=True)
 
         e_year = st.text_input("연도 (골글·시그)", value=str(sel.get("year") or ""), placeholder="예: 22, 96, 08", key=f"e_year_{gidx}")
 

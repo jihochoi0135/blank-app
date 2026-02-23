@@ -1,0 +1,2844 @@
+[
+  {
+    "team": "NC",
+    "role": "선발",
+    "raw_prefix": "",
+    "name": "페디",
+    "pitches": [
+      "체인지업",
+      "슬라이더",
+      "커브",
+      "커터",
+      "싱커"
+    ],
+    "player_type": "골글",
+    "year": null,
+    "impac_type": null
+  },
+  {
+    "team": "두산",
+    "role": "선발",
+    "raw_prefix": "",
+    "name": "미란다",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "포크"
+    ],
+    "player_type": "골글",
+    "year": null,
+    "impac_type": null
+  },
+  {
+    "team": "한화",
+    "role": "선발",
+    "raw_prefix": "",
+    "name": "폰세",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "커브",
+      "커터"
+    ],
+    "player_type": "골글",
+    "year": null,
+    "impac_type": null
+  },
+  {
+    "team": "키움",
+    "role": "선발",
+    "raw_prefix": "",
+    "name": "안우진",
+    "pitches": [
+      "커브",
+      "체인지업",
+      "포심",
+      "슬라이더"
+    ],
+    "player_type": "골글",
+    "year": null,
+    "impac_type": null
+  },
+  {
+    "team": "한화",
+    "role": "선발",
+    "raw_prefix": "",
+    "name": "구대성",
+    "pitches": [
+      "체인지업",
+      "커브",
+      "포심",
+      "싱커",
+      "슬라이더"
+    ],
+    "player_type": "골글",
+    "year": null,
+    "impac_type": null
+  },
+  {
+    "team": "SSG",
+    "role": "선발",
+    "raw_prefix": "",
+    "name": "김광현",
+    "pitches": [
+      "체인지업",
+      "포심",
+      "포크",
+      "슬라이더",
+      "커터"
+    ],
+    "player_type": "골글",
+    "year": null,
+    "impac_type": null
+  },
+  {
+    "team": "삼성",
+    "role": "선발",
+    "raw_prefix": "22",
+    "name": "수아레즈",
+    "pitches": [
+      "포심",
+      "투심",
+      "체인지업",
+      "슬라이더",
+      "커브"
+    ],
+    "player_type": "시그",
+    "year": 22,
+    "impac_type": null
+  },
+  {
+    "team": "삼성",
+    "role": "선발",
+    "raw_prefix": "14",
+    "name": "벤덴헐크",
+    "pitches": [
+      "포심",
+      "투심",
+      "체인지업",
+      "슬라이더",
+      "커브"
+    ],
+    "player_type": "시그",
+    "year": 14,
+    "impac_type": null
+  },
+  {
+    "team": "삼성",
+    "role": "선발",
+    "raw_prefix": "95",
+    "name": "김상엽",
+    "pitches": [
+      "포심",
+      "투심",
+      "체인지업",
+      "슬라이더",
+      "커브"
+    ],
+    "player_type": "시그",
+    "year": 95,
+    "impac_type": null
+  },
+  {
+    "team": "삼성",
+    "role": "선발",
+    "raw_prefix": "우에",
+    "name": "김시진",
+    "pitches": [
+      "포심",
+      "투심",
+      "체인지업",
+      "슬라이더",
+      "커브"
+    ],
+    "player_type": "임팩",
+    "impac_type": "우에",
+    "year": null
+  },
+  {
+    "team": "삼성",
+    "role": "선발",
+    "raw_prefix": "좌에",
+    "name": "권영호",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "커브",
+      "포크"
+    ],
+    "player_type": "임팩",
+    "impac_type": "좌에",
+    "year": null
+  },
+  {
+    "team": "삼성",
+    "role": "선발",
+    "raw_prefix": "가사",
+    "name": "레일런",
+    "pitches": [
+      "포심",
+      "투심",
+      "체인지업",
+      "슬라이더",
+      "커터"
+    ],
+    "player_type": "임팩",
+    "impac_type": "가사",
+    "year": null
+  },
+  {
+    "team": "삼성",
+    "role": "선발",
+    "raw_prefix": "가사",
+    "name": "배영수",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "포크"
+    ],
+    "player_type": "임팩",
+    "impac_type": "가사",
+    "year": null
+  },
+  {
+    "team": "삼성",
+    "role": "중계",
+    "raw_prefix": "10",
+    "name": "권혁",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "포크"
+    ],
+    "player_type": "시그",
+    "year": 10,
+    "impac_type": null
+  },
+  {
+    "team": "삼성",
+    "role": "중계",
+    "raw_prefix": "가사",
+    "name": "이호성",
+    "pitches": [
+      "포심",
+      "슬라이더",
+      "커브",
+      "커터"
+    ],
+    "player_type": "임팩",
+    "impac_type": "가사",
+    "year": null
+  },
+  {
+    "team": "삼성",
+    "role": "중계",
+    "raw_prefix": "얼리",
+    "name": "백정현",
+    "pitches": [
+      "포심",
+      "슬라이더",
+      "커브",
+      "포크"
+    ],
+    "player_type": "임팩",
+    "impac_type": "얼리",
+    "year": null
+  },
+  {
+    "team": "삼성",
+    "role": "중계",
+    "raw_prefix": "당쇠",
+    "name": "오봉옥",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "커브"
+    ],
+    "player_type": "임팩",
+    "impac_type": "당쇠",
+    "year": null
+  },
+  {
+    "team": "삼성",
+    "role": "중계",
+    "raw_prefix": "구조대",
+    "name": "김현욱",
+    "pitches": [
+      "포심",
+      "서클체인지업",
+      "커브",
+      "싱커"
+    ],
+    "player_type": "임팩",
+    "impac_type": "구조대",
+    "year": null
+  },
+  {
+    "team": "삼성",
+    "role": "중계",
+    "raw_prefix": "베테랑",
+    "name": "곽채진",
+    "pitches": [
+      "포심",
+      "슬라이더",
+      "커브",
+      "포크"
+    ],
+    "player_type": "임팩",
+    "impac_type": "베테랑",
+    "year": null
+  },
+  {
+    "team": "삼성",
+    "role": "중계",
+    "raw_prefix": "키플",
+    "name": "권오준",
+    "pitches": [
+      "포심",
+      "서클체인지업",
+      "슬라이더",
+      "커브",
+      "싱커"
+    ],
+    "player_type": "임팩",
+    "impac_type": "키플",
+    "year": null
+  },
+  {
+    "team": "삼성",
+    "role": "중계",
+    "raw_prefix": "여사",
+    "name": "우규민",
+    "pitches": [
+      "포심",
+      "투심",
+      "체인지업",
+      "슬라이더",
+      "커브"
+    ],
+    "player_type": "임팩",
+    "impac_type": "여사",
+    "year": null
+  },
+  {
+    "team": "삼성",
+    "role": "중계",
+    "raw_prefix": "구마",
+    "name": "심창민",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "커브",
+      "싱커"
+    ],
+    "player_type": "임팩",
+    "impac_type": "구마",
+    "year": null
+  },
+  {
+    "team": "삼성",
+    "role": "중계",
+    "raw_prefix": "국에",
+    "name": "최충연",
+    "pitches": [
+      "포심",
+      "슬라이더",
+      "커브",
+      "포크"
+    ],
+    "player_type": "국대",
+    "impac_type": null,
+    "year": null
+  },
+  {
+    "team": "삼성",
+    "role": "마무리",
+    "raw_prefix": "여사",
+    "name": "오승환",
+    "pitches": [
+      "포심",
+      "투심",
+      "체인지업",
+      "슬라이더",
+      "커브"
+    ],
+    "player_type": "임팩",
+    "impac_type": "여사",
+    "year": null
+  },
+  {
+    "team": "기아",
+    "role": "선발",
+    "raw_prefix": "우에",
+    "name": "선동열",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "커브",
+      "포크"
+    ],
+    "player_type": "임팩",
+    "impac_type": "우에",
+    "year": null
+  },
+  {
+    "team": "기아",
+    "role": "선발",
+    "raw_prefix": "여사",
+    "name": "윤석민",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "커브",
+      "포크"
+    ],
+    "player_type": "임팩",
+    "impac_type": "여사",
+    "year": null
+  },
+  {
+    "team": "기아",
+    "role": "선발",
+    "raw_prefix": "좌에",
+    "name": "양현종",
+    "pitches": [
+      "커브",
+      "슬라이더",
+      "포심",
+      "서클체인지업",
+      "체인지업"
+    ],
+    "player_type": "임팩",
+    "year": null,
+    "impac_type": "좌에"
+  },
+  {
+    "team": "기아",
+    "role": "선발",
+    "raw_prefix": "20",
+    "name": "브룩스",
+    "pitches": [
+      "포심",
+      "투심",
+      "체인지업",
+      "슬라이더",
+      "커브"
+    ],
+    "player_type": "시그",
+    "year": 20,
+    "impac_type": null
+  },
+  {
+    "team": "기아",
+    "role": "선발",
+    "raw_prefix": "25",
+    "name": "네일",
+    "pitches": [
+      "투심",
+      "체인지업",
+      "슬라이더",
+      "커터"
+    ],
+    "player_type": "시그",
+    "year": 25,
+    "impac_type": null
+  },
+  {
+    "team": "기아",
+    "role": "선발",
+    "raw_prefix": "91",
+    "name": "이강철",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "커브",
+      "싱커"
+    ],
+    "player_type": "시그",
+    "year": 91,
+    "impac_type": null
+  },
+  {
+    "team": "기아",
+    "role": "중계",
+    "raw_prefix": "86",
+    "name": "김정수",
+    "pitches": [
+      "포심",
+      "슬라이더",
+      "커브",
+      "싱커"
+    ],
+    "player_type": "시그",
+    "year": 86,
+    "impac_type": null
+  },
+  {
+    "team": "기아",
+    "role": "중계",
+    "raw_prefix": "구조대",
+    "name": "유동훈",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "커브",
+      "싱커"
+    ],
+    "player_type": "임팩",
+    "impac_type": "구조대",
+    "year": null
+  },
+  {
+    "team": "기아",
+    "role": "중계",
+    "raw_prefix": "00",
+    "name": "오봉옥",
+    "pitches": [
+      "포크",
+      "포심",
+      "슬라이더",
+      "커브"
+    ],
+    "player_type": "시그",
+    "year": "00",
+    "impac_type": null
+  },
+  {
+    "team": "기아",
+    "role": "중계",
+    "raw_prefix": "당쇠",
+    "name": "임기영",
+    "pitches": [
+      "포심",
+      "서클체인지업",
+      "슬라이더",
+      "싱커"
+    ],
+    "player_type": "임팩",
+    "impac_type": "당쇠",
+    "year": null
+  },
+  {
+    "team": "기아",
+    "role": "중계",
+    "raw_prefix": "당쇠",
+    "name": "송유석",
+    "pitches": [
+      "포심",
+      "투심",
+      "슬라이더",
+      "커브"
+    ],
+    "player_type": "임팩",
+    "impac_type": "당쇠",
+    "year": null
+  },
+  {
+    "team": "기아",
+    "role": "중계",
+    "raw_prefix": "국에",
+    "name": "최지민",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더"
+    ],
+    "player_type": "국대",
+    "impac_type": null,
+    "year": null
+  },
+  {
+    "team": "기아",
+    "role": "마무리",
+    "raw_prefix": "여사",
+    "name": "한기주",
+    "pitches": [
+      "포심",
+      "투심",
+      "체인지업",
+      "슬라이더",
+      "커브"
+    ],
+    "player_type": "임팩",
+    "impac_type": "여사",
+    "year": null
+  },
+  {
+    "team": "KT",
+    "role": "선발",
+    "raw_prefix": "22",
+    "name": "엄상백",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더"
+    ],
+    "player_type": "시그",
+    "year": 22,
+    "impac_type": null
+  },
+  {
+    "team": "KT",
+    "role": "선발",
+    "raw_prefix": "분메",
+    "name": "쿠에바스",
+    "pitches": [
+      "포심",
+      "투심",
+      "체인지업",
+      "슬라이더",
+      "커터"
+    ],
+    "player_type": "임팩",
+    "impac_type": "분메",
+    "year": null
+  },
+  {
+    "team": "KT",
+    "role": "선발",
+    "raw_prefix": "원투",
+    "name": "벤릭",
+    "pitches": [
+      "포심",
+      "서클체인지업",
+      "슬라이더",
+      "커브",
+      "커터"
+    ],
+    "player_type": "임팩",
+    "impac_type": "원투",
+    "year": null
+  },
+  {
+    "team": "KT",
+    "role": "선발",
+    "raw_prefix": "우에",
+    "name": "데스파이네",
+    "pitches": [
+      "포심",
+      "투심",
+      "체인지업",
+      "커브",
+      "커터"
+    ],
+    "player_type": "임팩",
+    "impac_type": "우에",
+    "year": null
+  },
+  {
+    "team": "KT",
+    "role": "선발",
+    "raw_prefix": "가사",
+    "name": "소형준",
+    "pitches": [
+      "투심",
+      "체인지업",
+      "커브",
+      "커터"
+    ],
+    "player_type": "임팩",
+    "impac_type": "가사",
+    "year": null
+  },
+  {
+    "team": "KT",
+    "role": "선발",
+    "raw_prefix": "우에",
+    "name": "소형준",
+    "pitches": [
+      "투심",
+      "체인지업",
+      "슬라이더",
+      "커브",
+      "커터"
+    ],
+    "player_type": "임팩",
+    "impac_type": "우에",
+    "year": null
+  },
+  {
+    "team": "KT",
+    "role": "선발",
+    "raw_prefix": "우에",
+    "name": "고영표",
+    "pitches": [
+      "포심",
+      "투심",
+      "서클체인지업",
+      "슬라이더",
+      "커브"
+    ],
+    "player_type": "임팩",
+    "impac_type": "우에",
+    "year": null
+  },
+  {
+    "team": "KT",
+    "role": "선발",
+    "raw_prefix": "탑",
+    "name": "고영표",
+    "pitches": [
+      "포심",
+      "투심",
+      "서클체인지업",
+      "커브",
+      "커터"
+    ],
+    "player_type": "임팩",
+    "impac_type": "탑",
+    "year": null
+  },
+  {
+    "team": "KT",
+    "role": "중계",
+    "raw_prefix": "구조대",
+    "name": "우규민",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "커브"
+    ],
+    "player_type": "임팩",
+    "impac_type": "구조대",
+    "year": null
+  },
+  {
+    "team": "KT",
+    "role": "중계",
+    "raw_prefix": "가사",
+    "name": "박영현",
+    "pitches": [
+      "포심",
+      "슬라이더",
+      "커브",
+      "커터",
+      "스플리터"
+    ],
+    "player_type": "임팩",
+    "impac_type": "가사",
+    "year": null
+  },
+  {
+    "team": "KT",
+    "role": "중계",
+    "raw_prefix": "22",
+    "name": "김민수",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "커브",
+      "커터"
+    ],
+    "player_type": "시그",
+    "year": 22,
+    "impac_type": null
+  },
+  {
+    "team": "KT",
+    "role": "중계",
+    "raw_prefix": "15",
+    "name": "조무근",
+    "pitches": [
+      "포심",
+      "슬라이더",
+      "커브",
+      "포크"
+    ],
+    "player_type": "시그",
+    "year": 15,
+    "impac_type": null
+  },
+  {
+    "team": "KT",
+    "role": "중계",
+    "raw_prefix": "얼리",
+    "name": "손동현",
+    "pitches": [
+      "포심",
+      "슬라이더",
+      "커브",
+      "포크"
+    ],
+    "player_type": "임팩",
+    "impac_type": "얼리",
+    "year": null
+  },
+  {
+    "team": "KT",
+    "role": "중계",
+    "raw_prefix": "가사",
+    "name": "손동현",
+    "pitches": [
+      "포심",
+      "슬라이더",
+      "스플리터"
+    ],
+    "player_type": "임팩",
+    "impac_type": "가사",
+    "year": null
+  },
+  {
+    "team": "KT",
+    "role": "중계",
+    "raw_prefix": "당쇠",
+    "name": "주권",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "커브",
+      "싱커"
+    ],
+    "player_type": "임팩",
+    "impac_type": "당쇠",
+    "year": null
+  },
+  {
+    "team": "KT",
+    "role": "중계",
+    "raw_prefix": "국에",
+    "name": "심재민",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "커브"
+    ],
+    "player_type": "국대",
+    "impac_type": null,
+    "year": null
+  },
+  {
+    "team": "KT",
+    "role": "마무리",
+    "raw_prefix": "구마",
+    "name": "김재윤",
+    "pitches": [
+      "포심",
+      "투심",
+      "슬라이더",
+      "커브",
+      "스플리터"
+    ],
+    "player_type": "임팩",
+    "impac_type": "구마",
+    "year": null
+  },
+  {
+    "team": "KT",
+    "role": "마무리",
+    "raw_prefix": "마무리",
+    "name": "김재윤",
+    "pitches": [
+      "포심",
+      "슬라이더",
+      "스플리터"
+    ],
+    "player_type": "임팩",
+    "impac_type": "마무리",
+    "year": null
+  },
+  {
+    "team": "KT",
+    "role": "마무리",
+    "raw_prefix": "여사",
+    "name": "박영현",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더"
+    ],
+    "player_type": "임팩",
+    "impac_type": "여사",
+    "year": null
+  },
+  {
+    "team": "한화",
+    "role": "선발",
+    "raw_prefix": "올",
+    "name": "폰세",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "커브",
+      "커터"
+    ],
+    "player_type": "임팩",
+    "impac_type": "올",
+    "year": null
+  },
+  {
+    "team": "한화",
+    "role": "선발",
+    "raw_prefix": "FA",
+    "name": "엄상백",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "커터"
+    ],
+    "player_type": "임팩",
+    "impac_type": "FA",
+    "year": null
+  },
+  {
+    "team": "한화",
+    "role": "선발",
+    "raw_prefix": "96",
+    "name": "정민철",
+    "pitches": [
+      "포심",
+      "슬라이더",
+      "커브",
+      "포크",
+      "싱커"
+    ],
+    "player_type": "시그",
+    "year": 96,
+    "impac_type": null
+  },
+  {
+    "team": "한화",
+    "role": "선발",
+    "raw_prefix": "12",
+    "name": "류현진",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "서클체인지업",
+      "슬라이더",
+      "커브"
+    ],
+    "player_type": "시그",
+    "year": 12,
+    "impac_type": null
+  },
+  {
+    "team": "한화",
+    "role": "선발",
+    "raw_prefix": "여사",
+    "name": "송진우",
+    "pitches": [
+      "포심",
+      "투심",
+      "체인지업",
+      "슬라이더",
+      "커브"
+    ],
+    "player_type": "임팩",
+    "impac_type": "여사",
+    "year": null
+  },
+  {
+    "team": "한화",
+    "role": "중계",
+    "raw_prefix": "가사",
+    "name": "문동주",
+    "pitches": [
+      "포심",
+      "투심",
+      "슬라이더",
+      "커브",
+      "포크"
+    ],
+    "player_type": "임팩",
+    "impac_type": "가사",
+    "year": null
+  },
+  {
+    "team": "한화",
+    "role": "중계",
+    "raw_prefix": "여사",
+    "name": "한승혁",
+    "pitches": [
+      "포심",
+      "슬라이더",
+      "커브",
+      "포크",
+      "싱커"
+    ],
+    "player_type": "임팩",
+    "impac_type": "여사",
+    "year": null
+  },
+  {
+    "team": "한화",
+    "role": "중계",
+    "raw_prefix": "여사",
+    "name": "이민우",
+    "pitches": [
+      "포심",
+      "투심",
+      "슬라이더",
+      "커브",
+      "커터"
+    ],
+    "player_type": "임팩",
+    "impac_type": "여사",
+    "year": null
+  },
+  {
+    "team": "한화",
+    "role": "중계",
+    "raw_prefix": "당쇠",
+    "name": "마정길",
+    "pitches": [
+      "포심",
+      "서클체인지업",
+      "슬라이더",
+      "커브",
+      "싱커"
+    ],
+    "player_type": "임팩",
+    "impac_type": "당쇠",
+    "year": null
+  },
+  {
+    "team": "한화",
+    "role": "중계",
+    "raw_prefix": "당쇠",
+    "name": "한용덕",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "커브",
+      "포크"
+    ],
+    "player_type": "임팩",
+    "impac_type": "당쇠",
+    "year": null
+  },
+  {
+    "team": "한화",
+    "role": "중계",
+    "raw_prefix": "15",
+    "name": "박정진",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "커브",
+      "포크"
+    ],
+    "player_type": "시그",
+    "year": 15,
+    "impac_type": null
+  },
+  {
+    "team": "한화",
+    "role": "중계",
+    "raw_prefix": "18",
+    "name": "이태양",
+    "pitches": [
+      "포심",
+      "슬라이더",
+      "커브",
+      "포크"
+    ],
+    "player_type": "시그",
+    "year": 18,
+    "impac_type": null
+  },
+  {
+    "team": "한화",
+    "role": "중계",
+    "raw_prefix": "20",
+    "name": "윤대경",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "커브",
+      "포크"
+    ],
+    "player_type": "시그",
+    "year": 20,
+    "impac_type": null
+  },
+  {
+    "team": "한화",
+    "role": "중계",
+    "raw_prefix": "국에",
+    "name": "김서현",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더"
+    ],
+    "player_type": "국대",
+    "impac_type": null,
+    "year": null
+  },
+  {
+    "team": "한화",
+    "role": "마무리",
+    "raw_prefix": "가사",
+    "name": "구대성",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "커브",
+      "싱커"
+    ],
+    "player_type": "임팩",
+    "impac_type": "가사",
+    "year": null
+  },
+  {
+    "team": "LG",
+    "role": "선발",
+    "raw_prefix": "탑",
+    "name": "임찬규",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "커브",
+      "커터"
+    ],
+    "player_type": "임팩",
+    "impac_type": "탑",
+    "year": null
+  },
+  {
+    "team": "LG",
+    "role": "선발",
+    "raw_prefix": "22",
+    "name": "플렉슨",
+    "pitches": [
+      "포심",
+      "서클체인지업",
+      "슬라이더",
+      "커브",
+      "커터"
+    ],
+    "player_type": "시그",
+    "year": 22,
+    "impac_type": null
+  },
+  {
+    "team": "LG",
+    "role": "선발",
+    "raw_prefix": "13",
+    "name": "리즈",
+    "pitches": [
+      "포심",
+      "슬라이더",
+      "커브",
+      "포크",
+      "커터"
+    ],
+    "player_type": "시그",
+    "year": 13,
+    "impac_type": null
+  },
+  {
+    "team": "LG",
+    "role": "선발",
+    "raw_prefix": "22",
+    "name": "켈리",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "커브",
+      "싱커"
+    ],
+    "player_type": "시그",
+    "year": 22,
+    "impac_type": null
+  },
+  {
+    "team": "LG",
+    "role": "선발",
+    "raw_prefix": "가사",
+    "name": "톨허스터",
+    "pitches": [
+      "포심",
+      "투심",
+      "커브",
+      "포크",
+      "커터"
+    ],
+    "player_type": "임팩",
+    "impac_type": "가사",
+    "year": null
+  },
+  {
+    "team": "LG",
+    "role": "선발",
+    "raw_prefix": "94",
+    "name": "이상훈",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "커브",
+      "포크"
+    ],
+    "player_type": "시그",
+    "year": 94,
+    "impac_type": null
+  },
+  {
+    "team": "LG",
+    "role": "선발",
+    "raw_prefix": "구마",
+    "name": "윌슨",
+    "pitches": [
+      "포심",
+      "투심",
+      "체인지업",
+      "커브",
+      "커터"
+    ],
+    "player_type": "임팩",
+    "impac_type": "구마",
+    "year": null
+  },
+  {
+    "team": "LG",
+    "role": "선발",
+    "raw_prefix": "라이브",
+    "name": "치리노스",
+    "pitches": [
+      "투심",
+      "슬라이더",
+      "포크"
+    ],
+    "player_type": "라이브",
+    "impac_type": null,
+    "year": null
+  },
+  {
+    "team": "LG",
+    "role": "중계",
+    "raw_prefix": "11",
+    "name": "한희",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "커브",
+      "싱커"
+    ],
+    "player_type": "시그",
+    "year": 11,
+    "impac_type": null
+  },
+  {
+    "team": "LG",
+    "role": "중계",
+    "raw_prefix": "02",
+    "name": "장문석",
+    "pitches": [
+      "커브",
+      "포크",
+      "슬라이더",
+      "포심",
+      "체인지업"
+    ],
+    "player_type": "시그",
+    "year": "02",
+    "impac_type": null
+  },
+  {
+    "team": "LG",
+    "role": "중계",
+    "raw_prefix": "여사",
+    "name": "신윤호",
+    "pitches": [
+      "포심",
+      "투심",
+      "체인지업",
+      "슬라이더",
+      "커브"
+    ],
+    "player_type": "임팩",
+    "impac_type": "여사",
+    "year": null
+  },
+  {
+    "team": "LG",
+    "role": "중계",
+    "raw_prefix": "가사",
+    "name": "에르난데스",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "커브",
+      "커터"
+    ],
+    "player_type": "임팩",
+    "impac_type": "가사",
+    "year": null
+  },
+  {
+    "team": "LG",
+    "role": "중계",
+    "raw_prefix": "구마",
+    "name": "정우영",
+    "pitches": [
+      "슬라이더",
+      "포크",
+      "커터",
+      "싱커"
+    ],
+    "player_type": "임팩",
+    "impac_type": "구마",
+    "year": null
+  },
+  {
+    "team": "LG",
+    "role": "중계",
+    "raw_prefix": "전천후",
+    "name": "우규민",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "커브",
+      "싱커"
+    ],
+    "player_type": "임팩",
+    "impac_type": "전천후",
+    "year": null
+  },
+  {
+    "team": "LG",
+    "role": "중계",
+    "raw_prefix": "국에",
+    "name": "유원상",
+    "pitches": [
+      "포심",
+      "슬라이더",
+      "커브",
+      "포크"
+    ],
+    "player_type": "국대",
+    "impac_type": null,
+    "year": null
+  },
+  {
+    "team": "LG",
+    "role": "마무리",
+    "raw_prefix": "마무리",
+    "name": "김용수",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "커브",
+      "스플리터"
+    ],
+    "player_type": "임팩",
+    "impac_type": "마무리",
+    "year": null
+  },
+  {
+    "team": "SSG",
+    "role": "선발",
+    "raw_prefix": "22",
+    "name": "김광현",
+    "pitches": [
+      "포심",
+      "서클체인지업",
+      "슬라이더",
+      "커브",
+      "스플리터"
+    ],
+    "player_type": "시그",
+    "year": 22,
+    "impac_type": null
+  },
+  {
+    "team": "SSG",
+    "role": "선발",
+    "raw_prefix": "08",
+    "name": "김광현",
+    "pitches": [
+      "커터",
+      "포심",
+      "포크",
+      "슬라이더",
+      "체인지업"
+    ],
+    "player_type": "시그",
+    "year": "08",
+    "impac_type": null
+  },
+  {
+    "team": "SSG",
+    "role": "선발",
+    "raw_prefix": "22",
+    "name": "폰트",
+    "pitches": [
+      "포심",
+      "투심",
+      "슬라이더",
+      "커브"
+    ],
+    "player_type": "시그",
+    "year": 22,
+    "impac_type": null
+  },
+  {
+    "team": "SSG",
+    "role": "선발",
+    "raw_prefix": "여사",
+    "name": "앤더슨",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "커브",
+      "커터"
+    ],
+    "player_type": "임팩",
+    "impac_type": "여사",
+    "year": null
+  },
+  {
+    "team": "SSG",
+    "role": "선발",
+    "raw_prefix": "우에",
+    "name": "켈리",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "커브",
+      "커터"
+    ],
+    "player_type": "임팩",
+    "impac_type": "우에",
+    "year": null
+  },
+  {
+    "team": "SSG",
+    "role": "선발",
+    "raw_prefix": "베테랑",
+    "name": "김원형",
+    "pitches": [
+      "포심",
+      "서클체인지업",
+      "커브",
+      "포크",
+      "싱커"
+    ],
+    "player_type": "임팩",
+    "impac_type": "베테랑",
+    "year": null
+  },
+  {
+    "team": "SSG",
+    "role": "중계",
+    "raw_prefix": "구조대",
+    "name": "조웅천",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "커브",
+      "싱커"
+    ],
+    "player_type": "임팩",
+    "impac_type": "구조대",
+    "year": null
+  },
+  {
+    "team": "SSG",
+    "role": "중계",
+    "raw_prefix": "12",
+    "name": "박희수",
+    "pitches": [
+      "포심",
+      "투심",
+      "체인지업",
+      "슬라이더",
+      "커브"
+    ],
+    "player_type": "시그",
+    "year": 12,
+    "impac_type": null
+  },
+  {
+    "team": "SSG",
+    "role": "중계",
+    "raw_prefix": "05",
+    "name": "위재영",
+    "pitches": [
+      "포크",
+      "슬라이더",
+      "커브",
+      "투심",
+      "포심"
+    ],
+    "player_type": "시그",
+    "year": "05",
+    "impac_type": null
+  },
+  {
+    "team": "SSG",
+    "role": "중계",
+    "raw_prefix": "24",
+    "name": "조병현",
+    "pitches": [
+      "포심",
+      "커브",
+      "포크"
+    ],
+    "player_type": "시그",
+    "year": 24,
+    "impac_type": null
+  },
+  {
+    "team": "SSG",
+    "role": "중계",
+    "raw_prefix": "여사",
+    "name": "김현욱",
+    "pitches": [
+      "포심",
+      "서클체인지업",
+      "커브",
+      "싱커"
+    ],
+    "player_type": "임팩",
+    "impac_type": "여사",
+    "year": null
+  },
+  {
+    "team": "SSG",
+    "role": "중계",
+    "raw_prefix": "가사",
+    "name": "송은범",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "커브"
+    ],
+    "player_type": "임팩",
+    "impac_type": "가사",
+    "year": null
+  },
+  {
+    "team": "SSG",
+    "role": "중계",
+    "raw_prefix": "백노",
+    "name": "노경은",
+    "pitches": [
+      "포심",
+      "투심",
+      "슬라이더",
+      "커브",
+      "포크"
+    ],
+    "player_type": "임팩",
+    "impac_type": "백노",
+    "year": null
+  },
+  {
+    "team": "SSG",
+    "role": "중계",
+    "raw_prefix": "국에",
+    "name": "오상민",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "커브"
+    ],
+    "player_type": "국대",
+    "impac_type": null,
+    "year": null
+  },
+  {
+    "team": "SSG",
+    "role": "중계",
+    "raw_prefix": "전천후",
+    "name": "김원형",
+    "pitches": [
+      "포심",
+      "서클체인지업",
+      "커브",
+      "포크",
+      "싱커"
+    ],
+    "player_type": "임팩",
+    "impac_type": "전천후",
+    "year": null
+  },
+  {
+    "team": "SSG",
+    "role": "마무리",
+    "raw_prefix": "07",
+    "name": "정대현",
+    "pitches": [
+      "싱커",
+      "커브",
+      "슬라이더",
+      "포심"
+    ],
+    "player_type": "시그",
+    "year": "07",
+    "impac_type": null
+  },
+  {
+    "team": "키움",
+    "role": "선발",
+    "raw_prefix": "98",
+    "name": "김수경",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "커브",
+      "포크"
+    ],
+    "player_type": "시그",
+    "year": 98,
+    "impac_type": null
+  },
+  {
+    "team": "키움",
+    "role": "선발",
+    "raw_prefix": "98",
+    "name": "정명원",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "커브",
+      "포크"
+    ],
+    "player_type": "시그",
+    "year": 98,
+    "impac_type": null
+  },
+  {
+    "team": "키움",
+    "role": "선발",
+    "raw_prefix": "22",
+    "name": "요키시",
+    "pitches": [
+      "투심",
+      "체인지업",
+      "슬라이더",
+      "커브"
+    ],
+    "player_type": "시그",
+    "year": 22,
+    "impac_type": null
+  },
+  {
+    "team": "키움",
+    "role": "선발",
+    "raw_prefix": "06",
+    "name": "장원삼",
+    "pitches": [
+      "서클체인지업",
+      "커브",
+      "슬라이더",
+      "포심"
+    ],
+    "player_type": "시그",
+    "year": "06",
+    "impac_type": null
+  },
+  {
+    "team": "키움",
+    "role": "선발",
+    "raw_prefix": "우에",
+    "name": "장명부",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "커브",
+      "싱커"
+    ],
+    "player_type": "임팩",
+    "impac_type": "우에",
+    "year": null
+  },
+  {
+    "team": "키움",
+    "role": "선발",
+    "raw_prefix": "우에",
+    "name": "박정현",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "커브",
+      "싱커"
+    ],
+    "player_type": "임팩",
+    "impac_type": "우에",
+    "year": null
+  },
+  {
+    "team": "키움",
+    "role": "선발",
+    "raw_prefix": "난세",
+    "name": "후라도",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "커브",
+      "커터",
+      "싱커"
+    ],
+    "player_type": "임팩",
+    "impac_type": "난세",
+    "year": null
+  },
+  {
+    "team": "키움",
+    "role": "선발",
+    "raw_prefix": "좌에",
+    "name": "최창호",
+    "pitches": [
+      "포크",
+      "슬라이더",
+      "커브",
+      "투심",
+      "포심"
+    ],
+    "player_type": "임팩",
+    "year": null,
+    "impac_type": "좌에"
+  },
+  {
+    "team": "키움",
+    "role": "선발",
+    "raw_prefix": "백노",
+    "name": "나이트",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "커브",
+      "싱커"
+    ],
+    "player_type": "임팩",
+    "impac_type": "백노",
+    "year": null
+  },
+  {
+    "team": "키움",
+    "role": "선발",
+    "raw_prefix": "좌에",
+    "name": "밴헤켄",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "커브",
+      "포크"
+    ],
+    "player_type": "임팩",
+    "impac_type": "좌에",
+    "year": null
+  },
+  {
+    "team": "키움",
+    "role": "중계",
+    "raw_prefix": "베포",
+    "name": "한현희",
+    "pitches": [
+      "포심",
+      "투심",
+      "서클체인지업",
+      "슬라이더"
+    ],
+    "player_type": "임팩",
+    "impac_type": "베포",
+    "year": null
+  },
+  {
+    "team": "키움",
+    "role": "중계",
+    "raw_prefix": "국에",
+    "name": "한현희",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "서클체인지업",
+      "슬라이더",
+      "싱커"
+    ],
+    "player_type": "국대",
+    "impac_type": null,
+    "year": null
+  },
+  {
+    "team": "키움",
+    "role": "중계",
+    "raw_prefix": "14",
+    "name": "조상우",
+    "pitches": [
+      "포심",
+      "투심",
+      "체인지업",
+      "슬라이더",
+      "커브"
+    ],
+    "player_type": "시그",
+    "year": 14,
+    "impac_type": null
+  },
+  {
+    "team": "키움",
+    "role": "중계",
+    "raw_prefix": "구조대",
+    "name": "조웅천",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "커브",
+      "싱커"
+    ],
+    "player_type": "임팩",
+    "impac_type": "구조대",
+    "year": null
+  },
+  {
+    "team": "키움",
+    "role": "중계",
+    "raw_prefix": "당쇠",
+    "name": "신완근",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "커브"
+    ],
+    "player_type": "임팩",
+    "impac_type": "당쇠",
+    "year": null
+  },
+  {
+    "team": "키움",
+    "role": "중계",
+    "raw_prefix": "여사",
+    "name": "김재웅",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "커브"
+    ],
+    "player_type": "임팩",
+    "impac_type": "여사",
+    "year": null
+  },
+  {
+    "team": "키움",
+    "role": "중계",
+    "raw_prefix": "여사",
+    "name": "김성민",
+    "pitches": [
+      "투심",
+      "체인지업",
+      "슬라이더",
+      "커브"
+    ],
+    "player_type": "임팩",
+    "impac_type": "여사",
+    "year": null
+  },
+  {
+    "team": "키움",
+    "role": "중계",
+    "raw_prefix": "06",
+    "name": "신철인",
+    "pitches": [
+      "체인지업",
+      "커브",
+      "슬라이더",
+      "포심"
+    ],
+    "player_type": "시그",
+    "year": "06",
+    "impac_type": null
+  },
+  {
+    "team": "키움",
+    "role": "중계",
+    "raw_prefix": "국에",
+    "name": "조규제",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "커브"
+    ],
+    "player_type": "국대",
+    "impac_type": null,
+    "year": null
+  },
+  {
+    "team": "키움",
+    "role": "마무리",
+    "raw_prefix": "가사",
+    "name": "조용준",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "커브",
+      "포크"
+    ],
+    "player_type": "임팩",
+    "impac_type": "가사",
+    "year": null
+  },
+  {
+    "team": "키움",
+    "role": "마무리",
+    "raw_prefix": "여사",
+    "name": "위재영",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "커브",
+      "포크"
+    ],
+    "player_type": "임팩",
+    "impac_type": "여사",
+    "year": null
+  },
+  {
+    "team": "키움",
+    "role": "마무리",
+    "raw_prefix": "06",
+    "name": "박승민",
+    "pitches": [
+      "싱커",
+      "포심",
+      "슬라이더",
+      "커브",
+      "체인지업"
+    ],
+    "player_type": "시그",
+    "year": "06",
+    "impac_type": null
+  },
+  {
+    "team": "롯데",
+    "role": "선발",
+    "raw_prefix": "파볼",
+    "name": "박세웅",
+    "pitches": [
+      "포심",
+      "슬라이더",
+      "커브",
+      "포크",
+      "싱커"
+    ],
+    "player_type": "임팩",
+    "impac_type": "파볼",
+    "year": null
+  },
+  {
+    "team": "롯데",
+    "role": "선발",
+    "raw_prefix": "84",
+    "name": "최동원",
+    "pitches": [
+      "포심",
+      "투심",
+      "슬라이더",
+      "커브",
+      "스플리터"
+    ],
+    "player_type": "시그",
+    "year": 84,
+    "impac_type": null
+  },
+  {
+    "team": "롯데",
+    "role": "선발",
+    "raw_prefix": "우에",
+    "name": "스트레일리",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "커브",
+      "싱커"
+    ],
+    "player_type": "임팩",
+    "impac_type": "우에",
+    "year": null
+  },
+  {
+    "team": "롯데",
+    "role": "선발",
+    "raw_prefix": "91",
+    "name": "박동희",
+    "pitches": [
+      "포심",
+      "슬라이더",
+      "커브",
+      "포크"
+    ],
+    "player_type": "시그",
+    "year": 91,
+    "impac_type": null
+  },
+  {
+    "team": "롯데",
+    "role": "선발",
+    "raw_prefix": "17",
+    "name": "레일리",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "커브",
+      "싱커"
+    ],
+    "player_type": "시그",
+    "year": 17,
+    "impac_type": null
+  },
+  {
+    "team": "롯데",
+    "role": "선발",
+    "raw_prefix": "좌에",
+    "name": "반즈",
+    "pitches": [
+      "포심",
+      "투심",
+      "체인지업",
+      "슬라이더"
+    ],
+    "player_type": "임팩",
+    "impac_type": "좌에",
+    "year": null
+  },
+  {
+    "team": "롯데",
+    "role": "선발",
+    "raw_prefix": "백노",
+    "name": "윌커슨",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "커브",
+      "커터"
+    ],
+    "player_type": "임팩",
+    "impac_type": "백노",
+    "year": null
+  },
+  {
+    "team": "롯데",
+    "role": "선발",
+    "raw_prefix": "가사",
+    "name": "염종석",
+    "pitches": [
+      "포심",
+      "투심",
+      "슬라이더",
+      "커브",
+      "싱커"
+    ],
+    "player_type": "임팩",
+    "impac_type": "가사",
+    "year": null
+  },
+  {
+    "team": "롯데",
+    "role": "중계",
+    "raw_prefix": "여사",
+    "name": "강영식",
+    "pitches": [
+      "포심",
+      "서클체인지업",
+      "슬라이더",
+      "커브",
+      "포크"
+    ],
+    "player_type": "임팩",
+    "impac_type": "여사",
+    "year": null
+  },
+  {
+    "team": "롯데",
+    "role": "중계",
+    "raw_prefix": "당쇠",
+    "name": "임경완",
+    "pitches": [
+      "포심",
+      "슬라이더",
+      "커브",
+      "싱커"
+    ],
+    "player_type": "임팩",
+    "impac_type": "당쇠",
+    "year": null
+  },
+  {
+    "team": "롯데",
+    "role": "중계",
+    "raw_prefix": "키플",
+    "name": "정현수",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "커브"
+    ],
+    "player_type": "임팩",
+    "impac_type": "키플",
+    "year": null
+  },
+  {
+    "team": "롯데",
+    "role": "중계",
+    "raw_prefix": "구조대",
+    "name": "박석진",
+    "pitches": [
+      "포심",
+      "서클체인지업",
+      "슬라이더",
+      "커브",
+      "싱커"
+    ],
+    "player_type": "임팩",
+    "impac_type": "구조대",
+    "year": null
+  },
+  {
+    "team": "롯데",
+    "role": "중계",
+    "raw_prefix": "22",
+    "name": "구승민",
+    "pitches": [
+      "포심",
+      "슬라이더",
+      "포크"
+    ],
+    "player_type": "시그",
+    "year": 22,
+    "impac_type": null
+  },
+  {
+    "team": "롯데",
+    "role": "중계",
+    "raw_prefix": "22",
+    "name": "나균안",
+    "pitches": [
+      "포심",
+      "슬라이더",
+      "커브",
+      "포크",
+      "커터"
+    ],
+    "player_type": "시그",
+    "year": 22,
+    "impac_type": null
+  },
+  {
+    "team": "롯데",
+    "role": "중계",
+    "raw_prefix": "가사",
+    "name": "강상수",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "서클체인지업",
+      "슬라이더",
+      "커브"
+    ],
+    "player_type": "임팩",
+    "impac_type": "가사",
+    "year": null
+  },
+  {
+    "team": "롯데",
+    "role": "중계",
+    "raw_prefix": "FA",
+    "name": "정대현",
+    "pitches": [
+      "포심",
+      "슬라이더",
+      "커브",
+      "싱커"
+    ],
+    "player_type": "임팩",
+    "impac_type": "FA",
+    "year": null
+  },
+  {
+    "team": "롯데",
+    "role": "중계",
+    "raw_prefix": "국에",
+    "name": "김진욱",
+    "pitches": [
+      "포심",
+      "슬라이더",
+      "커브"
+    ],
+    "player_type": "국대",
+    "impac_type": null,
+    "year": null
+  },
+  {
+    "team": "롯데",
+    "role": "마무리",
+    "raw_prefix": "여사",
+    "name": "손승락",
+    "pitches": [
+      "포심",
+      "투심",
+      "슬라이더",
+      "커터"
+    ],
+    "player_type": "임팩",
+    "impac_type": "여사",
+    "year": null
+  },
+  {
+    "team": "롯데",
+    "role": "마무리",
+    "raw_prefix": "얼리",
+    "name": "김원중",
+    "pitches": [
+      "포심",
+      "슬라이더",
+      "커브",
+      "포크"
+    ],
+    "player_type": "임팩",
+    "impac_type": "얼리",
+    "year": null
+  },
+  {
+    "team": "NC",
+    "role": "선발",
+    "raw_prefix": "우에",
+    "name": "페디",
+    "pitches": [
+      "체인지업",
+      "슬라이더",
+      "커브",
+      "커터",
+      "싱커"
+    ],
+    "player_type": "임팩",
+    "impac_type": "우에",
+    "year": null
+  },
+  {
+    "team": "NC",
+    "role": "선발",
+    "raw_prefix": "여사",
+    "name": "하든",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "커브",
+      "싱커"
+    ],
+    "player_type": "임팩",
+    "impac_type": "여사",
+    "year": null
+  },
+  {
+    "team": "NC",
+    "role": "선발",
+    "raw_prefix": "가사",
+    "name": "찰리",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "커터",
+      "싱커"
+    ],
+    "player_type": "임팩",
+    "impac_type": "가사",
+    "year": null
+  },
+  {
+    "team": "NC",
+    "role": "선발",
+    "raw_prefix": "20",
+    "name": "구창모",
+    "pitches": [
+      "포심",
+      "슬라이더",
+      "커브",
+      "스플리터"
+    ],
+    "player_type": "시그",
+    "year": 20,
+    "impac_type": null
+  },
+  {
+    "team": "NC",
+    "role": "선발",
+    "raw_prefix": "22",
+    "name": "루친스키",
+    "pitches": [
+      "포심",
+      "커브",
+      "포크",
+      "커터",
+      "싱커"
+    ],
+    "player_type": "시그",
+    "year": 22,
+    "impac_type": null
+  },
+  {
+    "team": "NC",
+    "role": "선발",
+    "raw_prefix": "13",
+    "name": "이재학",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "서클체인지업",
+      "슬라이더",
+      "커브"
+    ],
+    "player_type": "시그",
+    "year": 13,
+    "impac_type": null
+  },
+  {
+    "team": "NC",
+    "role": "중계",
+    "raw_prefix": "당쇠",
+    "name": "최금강",
+    "pitches": [
+      "포심",
+      "투심",
+      "슬라이더",
+      "커브"
+    ],
+    "player_type": "임팩",
+    "impac_type": "당쇠",
+    "year": null
+  },
+  {
+    "team": "NC",
+    "role": "중계",
+    "raw_prefix": "구조대",
+    "name": "김진성",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "포크"
+    ],
+    "player_type": "임팩",
+    "impac_type": "구조대",
+    "year": null
+  },
+  {
+    "team": "NC",
+    "role": "중계",
+    "raw_prefix": "저니맨",
+    "name": "임창민",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "커브",
+      "포크"
+    ],
+    "player_type": "임팩",
+    "impac_type": "저니맨",
+    "year": null
+  },
+  {
+    "team": "NC",
+    "role": "중계",
+    "raw_prefix": "16",
+    "name": "원종현",
+    "pitches": [
+      "포심",
+      "투심",
+      "체인지업",
+      "슬라이더",
+      "커브"
+    ],
+    "player_type": "시그",
+    "year": 16,
+    "impac_type": null
+  },
+  {
+    "team": "NC",
+    "role": "중계",
+    "raw_prefix": "23",
+    "name": "류진욱",
+    "pitches": [
+      "포심",
+      "슬라이더",
+      "커터",
+      "스플리터"
+    ],
+    "player_type": "시그",
+    "year": 23,
+    "impac_type": null
+  },
+  {
+    "team": "NC",
+    "role": "중계",
+    "raw_prefix": "구마",
+    "name": "박진우",
+    "pitches": [
+      "포심",
+      "투심",
+      "체인지업",
+      "슬라이더",
+      "싱커"
+    ],
+    "player_type": "임팩",
+    "impac_type": "구마",
+    "year": null
+  },
+  {
+    "team": "NC",
+    "role": "중계",
+    "raw_prefix": "국에",
+    "name": "이민호",
+    "pitches": [
+      "포심",
+      "슬라이더",
+      "스플리터"
+    ],
+    "player_type": "국대",
+    "impac_type": null,
+    "year": null
+  },
+  {
+    "team": "NC",
+    "role": "마무리",
+    "raw_prefix": "22",
+    "name": "이용찬",
+    "pitches": [
+      "포심",
+      "슬라이더",
+      "커브",
+      "포크"
+    ],
+    "player_type": "시그",
+    "year": 22,
+    "impac_type": null
+  },
+  {
+    "team": "NC",
+    "role": "마무리",
+    "raw_prefix": "탑",
+    "name": "류진욱",
+    "pitches": [
+      "포심",
+      "슬라이더",
+      "포크",
+      "커터"
+    ],
+    "player_type": "임팩",
+    "impac_type": "탑",
+    "year": null
+  },
+  {
+    "team": "두산",
+    "role": "선발",
+    "raw_prefix": "좌에",
+    "name": "미란다",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "포크"
+    ],
+    "player_type": "임팩",
+    "impac_type": "좌에",
+    "year": null
+  },
+  {
+    "team": "두산",
+    "role": "선발",
+    "raw_prefix": "탑",
+    "name": "잭로그",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "커터",
+      "싱커"
+    ],
+    "player_type": "임팩",
+    "impac_type": "탑",
+    "year": null
+  },
+  {
+    "team": "두산",
+    "role": "선발",
+    "raw_prefix": "베테랑",
+    "name": "니퍼트",
+    "pitches": [
+      "포심",
+      "슬라이더",
+      "커브",
+      "싱커",
+      "스플리터"
+    ],
+    "player_type": "임팩",
+    "impac_type": "베테랑",
+    "year": null
+  },
+  {
+    "team": "두산",
+    "role": "선발",
+    "raw_prefix": "19",
+    "name": "린드블럼",
+    "pitches": [
+      "포심",
+      "슬라이더",
+      "커브",
+      "싱커",
+      "스플리터"
+    ],
+    "player_type": "시그",
+    "year": 19,
+    "impac_type": null
+  },
+  {
+    "team": "두산",
+    "role": "선발",
+    "raw_prefix": "우에",
+    "name": "박철순",
+    "pitches": [
+      "포심",
+      "투심",
+      "체인지업",
+      "슬라이더",
+      "커브"
+    ],
+    "player_type": "임팩",
+    "impac_type": "우에",
+    "year": null
+  },
+  {
+    "team": "두산",
+    "role": "선발",
+    "raw_prefix": "04",
+    "name": "박명환",
+    "pitches": [
+      "포심",
+      "포크",
+      "슬라이더",
+      "커브",
+      "체인지업"
+    ],
+    "player_type": "시그",
+    "year": "04",
+    "impac_type": null
+  },
+  {
+    "team": "두산",
+    "role": "선발",
+    "raw_prefix": "여사",
+    "name": "박명환",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "포크",
+      "싱커"
+    ],
+    "player_type": "임팩",
+    "impac_type": "여사",
+    "year": null
+  },
+  {
+    "team": "두산",
+    "role": "선발",
+    "raw_prefix": "느미",
+    "name": "유희관",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "커브",
+      "싱커"
+    ],
+    "player_type": "임팩",
+    "impac_type": "느미",
+    "year": null
+  },
+  {
+    "team": "두산",
+    "role": "중계",
+    "raw_prefix": "04",
+    "name": "이재영",
+    "pitches": [
+      "포크",
+      "커브",
+      "슬라이더",
+      "포심"
+    ],
+    "player_type": "시그",
+    "year": "04",
+    "impac_type": null
+  },
+  {
+    "team": "두산",
+    "role": "중계",
+    "raw_prefix": "중계",
+    "name": "구자운",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "포크"
+    ],
+    "player_type": "임팩",
+    "impac_type": "중계",
+    "year": null
+  },
+  {
+    "team": "두산",
+    "role": "중계",
+    "raw_prefix": "12",
+    "name": "홍상삼",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "커브",
+      "포크"
+    ],
+    "player_type": "시그",
+    "year": 12,
+    "impac_type": null
+  },
+  {
+    "team": "두산",
+    "role": "중계",
+    "raw_prefix": "얼리",
+    "name": "홍상삼",
+    "pitches": [
+      "포심",
+      "슬라이더",
+      "커브",
+      "포크"
+    ],
+    "player_type": "임팩",
+    "impac_type": "얼리",
+    "year": null
+  },
+  {
+    "team": "두산",
+    "role": "중계",
+    "raw_prefix": "11",
+    "name": "정재훈",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "포크"
+    ],
+    "player_type": "시그",
+    "year": 11,
+    "impac_type": null
+  },
+  {
+    "team": "두산",
+    "role": "중계",
+    "raw_prefix": "구마",
+    "name": "박치국",
+    "pitches": [
+      "포심",
+      "투심",
+      "체인지업",
+      "슬라이더",
+      "커브"
+    ],
+    "player_type": "임팩",
+    "impac_type": "구마",
+    "year": null
+  },
+  {
+    "team": "두산",
+    "role": "중계",
+    "raw_prefix": "구조대",
+    "name": "고창성",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "커브",
+      "포크",
+      "싱커"
+    ],
+    "player_type": "임팩",
+    "impac_type": "구조대",
+    "year": null
+  },
+  {
+    "team": "두산",
+    "role": "중계",
+    "raw_prefix": "국에",
+    "name": "정철원",
+    "pitches": [
+      "포심",
+      "슬라이더",
+      "커브",
+      "스플리터"
+    ],
+    "player_type": "국대",
+    "impac_type": null,
+    "year": null
+  },
+  {
+    "team": "두산",
+    "role": "중계",
+    "raw_prefix": "여사",
+    "name": "김강률",
+    "pitches": [
+      "포심",
+      "슬라이더",
+      "커브",
+      "포크"
+    ],
+    "player_type": "임팩",
+    "impac_type": "여사",
+    "year": null
+  },
+  {
+    "team": "두산",
+    "role": "중계",
+    "raw_prefix": "당쇠",
+    "name": "이용호",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "서클체인지업",
+      "슬라이더",
+      "커브"
+    ],
+    "player_type": "임팩",
+    "impac_type": "당쇠",
+    "year": null
+  },
+  {
+    "team": "두산",
+    "role": "중계",
+    "raw_prefix": "당쇠",
+    "name": "장호연",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "커브",
+      "스플리터"
+    ],
+    "player_type": "임팩",
+    "impac_type": "당쇠",
+    "year": null
+  },
+  {
+    "team": "두산",
+    "role": "중계",
+    "raw_prefix": "21",
+    "name": "홍건희",
+    "pitches": [
+      "포심",
+      "슬라이더",
+      "커브"
+    ],
+    "player_type": "시그",
+    "year": 21,
+    "impac_type": null
+  },
+  {
+    "team": "두산",
+    "role": "마무리",
+    "raw_prefix": "가사",
+    "name": "진필중",
+    "pitches": [
+      "포심",
+      "체인지업",
+      "슬라이더",
+      "커브"
+    ],
+    "player_type": "임팩",
+    "impac_type": "가사",
+    "year": null
+  },
+  {
+    "team": "두산",
+    "role": "마무리",
+    "raw_prefix": "얼리",
+    "name": "김택연",
+    "pitches": [
+      "포심",
+      "슬라이더",
+      "커브",
+      "포크"
+    ],
+    "player_type": "임팩",
+    "impac_type": "얼리",
+    "year": null
+  },
+  {
+    "team": "두산",
+    "role": "마무리",
+    "raw_prefix": "마무리",
+    "name": "프록터",
+    "pitches": [
+      "포심",
+      "투심",
+      "체인지업",
+      "슬라이더",
+      "포크"
+    ],
+    "player_type": "임팩",
+    "impac_type": "마무리",
+    "year": null
+  },
+  {
+    "team": "기아",
+    "role": "선발",
+    "raw_prefix": "",
+    "name": "윤석민",
+    "pitches": [
+      "싱커",
+      "슬라이더",
+      "서클체인지업",
+      "커브",
+      "포심"
+    ],
+    "player_type": "골글",
+    "year": null,
+    "impac_type": null
+  }
+]

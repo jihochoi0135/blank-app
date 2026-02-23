@@ -1652,13 +1652,13 @@
     "raw_prefix": "06",
     "name": "장원삼",
     "pitches": [
-      "포심",
       "서클체인지업",
+      "커브",
       "슬라이더",
-      "커브"
+      "포심"
     ],
     "player_type": "시그",
-    "year": 6,
+    "year": "06",
     "impac_type": null
   },
   {

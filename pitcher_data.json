@@ -353,8 +353,8 @@
       "커브",
       "포크"
     ],
-    "player_type": "임팩",
-    "impac_type": "국에",
+    "player_type": "국대",
+    "impac_type": null,
     "year": null
   },
   {
@@ -553,8 +553,8 @@
       "체인지업",
       "슬라이더"
     ],
-    "player_type": "임팩",
-    "impac_type": "국에",
+    "player_type": "국대",
+    "impac_type": null,
     "year": null
   },
   {
@@ -815,8 +815,8 @@
       "슬라이더",
       "커브"
     ],
-    "player_type": "임팩",
-    "impac_type": "국에",
+    "player_type": "국대",
+    "impac_type": null,
     "year": null
   },
   {
@@ -1079,8 +1079,8 @@
       "체인지업",
       "슬라이더"
     ],
-    "player_type": "임팩",
-    "impac_type": "국에",
+    "player_type": "국대",
+    "impac_type": null,
     "year": null
   },
   {
@@ -1221,8 +1221,8 @@
       "슬라이더",
       "포크"
     ],
-    "player_type": "임팩",
-    "impac_type": "라이브",
+    "player_type": "라이브",
+    "impac_type": null,
     "year": null
   },
   {
@@ -1330,8 +1330,8 @@
       "커브",
       "포크"
     ],
-    "player_type": "임팩",
-    "impac_type": "국에",
+    "player_type": "국대",
+    "impac_type": null,
     "year": null
   },
   {
@@ -1564,8 +1564,8 @@
       "슬라이더",
       "커브"
     ],
-    "player_type": "임팩",
-    "impac_type": "국에",
+    "player_type": "국대",
+    "impac_type": null,
     "year": null
   },
   {
@@ -1712,18 +1712,18 @@
   {
     "team": "키움",
     "role": "선발",
-    "raw_prefix": "죄에",
+    "raw_prefix": "좌에",
     "name": "최창호",
     "pitches": [
-      "포심",
-      "투심",
+      "포크",
       "슬라이더",
       "커브",
-      "포크"
+      "투심",
+      "포심"
     ],
     "player_type": "임팩",
-    "impac_type": "죄에",
-    "year": null
+    "year": null,
+    "impac_type": "좌에"
   },
   {
     "team": "키움",
@@ -1784,8 +1784,8 @@
       "슬라이더",
       "싱커"
     ],
-    "player_type": "임팩",
-    "impac_type": "국에",
+    "player_type": "국대",
+    "impac_type": null,
     "year": null
   },
   {
@@ -1891,8 +1891,8 @@
       "슬라이더",
       "커브"
     ],
-    "player_type": "임팩",
-    "impac_type": "국에",
+    "player_type": "국대",
+    "impac_type": null,
     "year": null
   },
   {
@@ -2202,8 +2202,8 @@
       "슬라이더",
       "커브"
     ],
-    "player_type": "임팩",
-    "impac_type": "국에",
+    "player_type": "국대",
+    "impac_type": null,
     "year": null
   },
   {
@@ -2434,8 +2434,8 @@
       "슬라이더",
       "스플리터"
     ],
-    "player_type": "임팩",
-    "impac_type": "국에",
+    "player_type": "국대",
+    "impac_type": null,
     "year": null
   },
   {
@@ -2714,8 +2714,8 @@
       "커브",
       "스플리터"
     ],
-    "player_type": "임팩",
-    "impac_type": "국에",
+    "player_type": "국대",
+    "impac_type": null,
     "year": null
   },
   {

@@ -547,11 +547,12 @@ elif "➕ 선수 추가" in page:
             role = st.selectbox("역할 *", ROLES)
             player_type = st.selectbox("카드 종류 *", ["골글", "시그", "임팩"])
         with c3:
-            year = st.number_input("연도 (시그)", min_value=82, max_value=25, value=22, step=1)
+            year = st.number_input("연도 (시그)", min_value=82, max_value=99, value=22, step=1)
             impac_type = st.selectbox("임팩 종류", ["없음"] + IMPAC_TYPES)
         
         pitches = st.multiselect("구종 *", PITCH_TYPES)
-        submitted = st.form_submit_button("✅ 추가")
+        st.markdown("---")
+        submitted = st.form_submit_button("✅ 선수 추가", use_container_width=True, type="primary")
         
         if submitted:
             if not name or not pitches:
@@ -610,7 +611,7 @@ elif "✏️ 선수 편집" in page:
                     index=["골글", "시그", "임팩"].index(selected_player.get("player_type", "시그")))
             with c3:
                 cur_year = selected_player.get("year") or 22
-                e_year = st.number_input("연도 (시그)", min_value=82, max_value=25, value=int(cur_year))
+                e_year = st.number_input("연도 (시그)", min_value=82, max_value=99, value=int(cur_year))
                 cur_impac = selected_player.get("impac_type") or "없음"
                 opts = ["없음"] + IMPAC_TYPES
                 impac_idx = opts.index(cur_impac) if cur_impac in opts else 0
@@ -618,11 +619,12 @@ elif "✏️ 선수 편집" in page:
             
             e_pitches = st.multiselect("구종", PITCH_TYPES, default=selected_player.get("pitches", []))
             
+            st.markdown("---")
             c_save, c_del = st.columns(2)
             with c_save:
-                save = st.form_submit_button("💾 저장")
+                save = st.form_submit_button("💾 저장", use_container_width=True, type="primary")
             with c_del:
-                delete = st.form_submit_button("🗑️ 삭제", type="secondary")
+                delete = st.form_submit_button("🗑️ 삭제", use_container_width=True, type="secondary")
             
             if save:
                 st.session_state.players[global_idx] = {

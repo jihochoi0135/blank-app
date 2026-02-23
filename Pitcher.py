@@ -63,7 +63,7 @@ PITCH_TYPES = ["포심","투심","체인지업","서클체인지업","슬라이�
 TEAMS = ["삼성","기아","KT","한화","LG","SSG","키움","롯데","NC","두산"]
 ROLES = ["선발","중계","마무리"]
 IMPAC_TYPES = ["우에","좌에","여사","가사","당쇠","구조대","베테랑","국에","탑","구마",
-               "얼리","베포","분메","파볼","저니맨","키플","백노","난세","라이브",
+               "얼리","베포","분메","파볼","저니맨","키플","백노","난세","죄에","라이브",
                "전천후","마무리","FA","올","중계","느미"]
 TYPE_CFG = {"골글":("#c9a227","black"), "시그":("#dc2626","white"), "임팩":("#16a34a","white")}
 
@@ -97,7 +97,7 @@ def default_data():
         {"team":"삼성","role":"마무리","raw_prefix":"여사","name":"오승환","pitches":["포심","투심","체인지업","슬라이더","커브"]},
         {"team":"기아","role":"선발","raw_prefix":"우에","name":"선동열","pitches":["포심","체인지업","슬라이더","커브","포크"]},
         {"team":"기아","role":"선발","raw_prefix":"여사","name":"윤석민","pitches":["포심","체인지업","슬라이더","커브","포크"]},
-        {"team":"기아","role":"선발","raw_prefix":"좌에","name":"양현종","pitches":["포심","체인지업","서클체인지업","슬라이더","커브"]},
+        {"team":"기아","role":"선발","raw_prefix":"죄에","name":"양현종","pitches":["포심","체인지업","서클체인지업","슬라이더","커브"]},
         {"team":"기아","role":"선발","raw_prefix":"20","name":"브룩스","pitches":["포심","투심","체인지업","슬라이더","커브"]},
         {"team":"기아","role":"선발","raw_prefix":"25","name":"네일","pitches":["투심","체인지업","슬라이더","커터"]},
         {"team":"기아","role":"선발","raw_prefix":"91","name":"이강철","pitches":["포심","체인지업","슬라이더","커브","싱커"]},
@@ -181,7 +181,7 @@ def default_data():
         {"team":"키움","role":"선발","raw_prefix":"우에","name":"장명부","pitches":["포심","체인지업","슬라이더","커브","싱커"]},
         {"team":"키움","role":"선발","raw_prefix":"우에","name":"박정현","pitches":["포심","체인지업","슬라이더","커브","싱커"]},
         {"team":"키움","role":"선발","raw_prefix":"난세","name":"후라도","pitches":["포심","체인지업","커브","커터","싱커"]},
-        {"team":"키움","role":"선발","raw_prefix":"좌에","name":"최창호","pitches":["포심","투심","슬라이더","커브","포크"]},
+        {"team":"키움","role":"선발","raw_prefix":"죄에","name":"최창호","pitches":["포심","투심","슬라이더","커브","포크"]},
         {"team":"키움","role":"선발","raw_prefix":"백노","name":"나이트","pitches":["포심","체인지업","슬라이더","커브","싱커"]},
         {"team":"키움","role":"선발","raw_prefix":"좌에","name":"밴헤켄","pitches":["포심","체인지업","슬라이더","커브","포크"]},
         {"team":"키움","role":"중계","raw_prefix":"베포","name":"한현희","pitches":["포심","투심","서클체인지업","슬라이더"]},
@@ -272,21 +272,31 @@ def default_data():
             p["player_type"] = "시그"; p["year"] = None; p["impac_type"] = None
     return raw
 
-def load_data():
-    if DATA_FILE.exists():
-        with open(DATA_FILE) as f:
-            d = json.load(f)
-        # migrate old 골글 team → 삼성
-        for p in d:
-            if p.get("team") == "골글":
-                p["team"] = "삼성"
-                p["player_type"] = "골글"
-        return d
-    return default_data()
-
 def save_data(data):
-    with open(DATA_FILE, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+    # Try app directory first, fall back to /tmp for read-only filesystems (e.g. Streamlit Cloud)
+    for path in [DATA_FILE, Path("/tmp/pitcher_data.json")]:
+        try:
+            with open(path, "w", encoding="utf-8") as f:
+                json.dump(data, f, ensure_ascii=False, indent=2)
+            return
+        except Exception:
+            continue
+
+def load_data():
+    # Check /tmp first (runtime saves), then app directory, then default
+    for path in [Path("/tmp/pitcher_data.json"), DATA_FILE]:
+        if path.exists():
+            try:
+                with open(path) as f:
+                    d = json.load(f)
+                for p in d:
+                    if p.get("team") == "골글":
+                        p["team"] = "삼성"
+                        p["player_type"] = "골글"
+                return d
+            except Exception:
+                continue
+    return default_data()
 
 if "players" not in st.session_state:
     st.session_state.players = load_data()

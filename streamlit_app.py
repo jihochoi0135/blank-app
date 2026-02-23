@@ -425,6 +425,27 @@ st.markdown("""<div class="header-banner"><h1>컴투스 프로야구 V26</h1><p>
 
 # ── Pages ──────────────────────────────────────────────────────────────────────
 
+def card_type_row(label, state_key, key_prefix, impac_reset_key=None):
+    """Card type: button + colored underline bar. Works for search (set) and add/edit (str)."""
+    st.markdown(f'<div class="flabel">{label}</div>', unsafe_allow_html=True)
+    cols = st.columns(3)
+    for i, (opt, (ac, tc)) in enumerate(TYPE_CFG.items()):
+        is_active = (opt in st.session_state[state_key]) if isinstance(st.session_state[state_key], set) else (st.session_state[state_key] == opt)
+        with cols[i]:
+            if st.button(opt, key=f"{key_prefix}_type__{opt}", use_container_width=True,
+                         type="primary" if is_active else "secondary"):
+                if isinstance(st.session_state[state_key], set):
+                    s = st.session_state[state_key]
+                    s.discard(opt) if opt in s else s.add(opt)
+                    st.session_state[state_key] = s
+                    if impac_reset_key and opt == "임팩" and "임팩" not in st.session_state[state_key]:
+                        st.session_state[impac_reset_key] = set()
+                else:
+                    st.session_state[state_key] = "" if is_active else opt
+                st.rerun()
+            bar_color = ac if is_active else "transparent"
+            st.markdown(f'<div style="height:3px;background:{bar_color};border-radius:2px;margin-top:-8px;margin-bottom:4px;"></div>', unsafe_allow_html=True)
+
 if "🔍 검색" in page:
     for k,d in [("s_team",set()),("s_role",set()),("s_type",set()),("s_impac",set())]:
         if k not in st.session_state: st.session_state[k] = d
@@ -453,26 +474,6 @@ if "🔍 검색" in page:
                         else: st.session_state[state_key] = "" if active else opt
                         st.rerun()
 
-    def card_type_row(state_key, key_prefix, impac_reset_key=None):
-        """Card type: button + colored underline bar to show which type & color."""
-        st.markdown('<div class="flabel">카드 종류</div>', unsafe_allow_html=True)
-        type_items = list(TYPE_CFG.items())
-        cols = st.columns(3)
-        for i, (opt, (ac, tc)) in enumerate(type_items):
-            is_active = (opt in st.session_state[state_key]) if isinstance(st.session_state[state_key], set) else (st.session_state[state_key] == opt)
-            with cols[i]:
-                if st.button(opt, key=f"{key_prefix}_type__{opt}", use_container_width=True,
-                             type="primary" if is_active else "secondary"):
-                    if isinstance(st.session_state[state_key], set):
-                        s_toggle(state_key, opt)
-                        if impac_reset_key and opt == "임팩" and "임팩" not in st.session_state[state_key]:
-                            st.session_state[impac_reset_key] = set()
-                    else:
-                        st.session_state[state_key] = "" if is_active else opt
-                    st.rerun()
-                # Colored underline bar shows the card type color
-                bar_color = ac if is_active else "transparent"
-                st.markdown(f'<div style="height:3px;background:{bar_color};border-radius:2px;margin-top:-8px;margin-bottom:4px;"></div>', unsafe_allow_html=True)
     search_name = st.text_input("🔎 선수명 검색", placeholder="이름 입력...")
     st.markdown("---")
 
@@ -482,7 +483,7 @@ if "🔍 검색" in page:
     flex_btn_row("역할", ROLES, "s_role")
     st.markdown("<div style='margin-bottom:4px'></div>", unsafe_allow_html=True)
 
-    card_type_row("s_type", "s", impac_reset_key="s_impac")
+    card_type_row("카드 종류", "s_type", "s", impac_reset_key="s_impac")
     st.markdown("<div style='margin-bottom:4px'></div>", unsafe_allow_html=True)
 
     # Only show impac filter if 임팩 is selected (or nothing selected)

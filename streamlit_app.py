@@ -67,7 +67,7 @@ PITCH_TYPES = ["포심","투심","체인지업","서클체인지업","슬라이�
 TEAMS = ["삼성","기아","KT","한화","LG","SSG","키움","롯데","NC","두산"]
 ROLES = ["선발","중계","마무리"]
 IMPAC_TYPES = ["우에","좌에","여사","가사","당쇠","구조대","베테랑","탑","구마",
-               "얼리","베포","분메","파볼","저니맨","키플","백노","난세",
+               "얼리","베포","분메","파볼","저니맨","키플","백노","난세","죄에",
                "전천후","마무리","FA","올","중계","느미"]
 TYPE_CFG = {"골글":("#c9a227","black"), "시그":("#dc2626","white"), "임팩":("#16a34a","white"), "국대":("#2563eb","white"), "라이브":("#e8eaf0","black")}
 
@@ -101,7 +101,7 @@ def default_data():
         {"team":"삼성","role":"마무리","raw_prefix":"여사","name":"오승환","pitches":["포심","투심","체인지업","슬라이더","커브"]},
         {"team":"기아","role":"선발","raw_prefix":"우에","name":"선동열","pitches":["포심","체인지업","슬라이더","커브","포크"]},
         {"team":"기아","role":"선발","raw_prefix":"여사","name":"윤석민","pitches":["포심","체인지업","슬라이더","커브","포크"]},
-        {"team":"기아","role":"선발","raw_prefix":"좌에","name":"양현종","pitches":["포심","체인지업","서클체인지업","슬라이더","커브"]},
+        {"team":"기아","role":"선발","raw_prefix":"죄에","name":"양현종","pitches":["포심","체인지업","서클체인지업","슬라이더","커브"]},
         {"team":"기아","role":"선발","raw_prefix":"20","name":"브룩스","pitches":["포심","투심","체인지업","슬라이더","커브"]},
         {"team":"기아","role":"선발","raw_prefix":"25","name":"네일","pitches":["투심","체인지업","슬라이더","커터"]},
         {"team":"기아","role":"선발","raw_prefix":"91","name":"이강철","pitches":["포심","체인지업","슬라이더","커브","싱커"]},
@@ -185,7 +185,7 @@ def default_data():
         {"team":"키움","role":"선발","raw_prefix":"우에","name":"장명부","pitches":["포심","체인지업","슬라이더","커브","싱커"]},
         {"team":"키움","role":"선발","raw_prefix":"우에","name":"박정현","pitches":["포심","체인지업","슬라이더","커브","싱커"]},
         {"team":"키움","role":"선발","raw_prefix":"난세","name":"후라도","pitches":["포심","체인지업","커브","커터","싱커"]},
-        {"team":"키움","role":"선발","raw_prefix":"좌에","name":"최창호","pitches":["포심","투심","슬라이더","커브","포크"]},
+        {"team":"키움","role":"선발","raw_prefix":"죄에","name":"최창호","pitches":["포심","투심","슬라이더","커브","포크"]},
         {"team":"키움","role":"선발","raw_prefix":"백노","name":"나이트","pitches":["포심","체인지업","슬라이더","커브","싱커"]},
         {"team":"키움","role":"선발","raw_prefix":"좌에","name":"밴헤켄","pitches":["포심","체인지업","슬라이더","커브","포크"]},
         {"team":"키움","role":"중계","raw_prefix":"베포","name":"한현희","pitches":["포심","투심","서클체인지업","슬라이더"]},
@@ -281,12 +281,12 @@ def default_data():
     return raw
 
 def _gh_cfg():
-    """Return GitHub config from st.secrets or None if not configured."""
+    """Return (token, gist_id) from st.secrets or (None, None)."""
     try:
         cfg = st.secrets["github"]
-        return cfg["token"], cfg["repo"], cfg.get("branch","main"), cfg.get("filepath","pitcher_data.json")
+        return cfg["token"], cfg["gist_id"]
     except Exception:
-        return None, None, None, None
+        return None, None
 
 def _migrate(data):
     for p in data:
@@ -304,26 +304,16 @@ def _migrate(data):
     return data
 
 def save_data(data):
-    token, repo, branch, filepath = _gh_cfg()
+    token, gist_id = _gh_cfg()
 
-    # ── GitHub save ──
-    if token and repo:
-        url = f"https://api.github.com/repos/{repo}/contents/{filepath}"
+    # ── Gist save ──
+    if token and gist_id:
+        url = f"https://api.github.com/gists/{gist_id}"
         headers = {"Authorization": f"token {token}", "Accept": "application/vnd.github.v3+json"}
         payload = json.dumps(data, ensure_ascii=False, indent=2)
-        encoded = base64.b64encode(payload.encode()).decode()
-        # Get current SHA (needed to update existing file)
-        sha = None
-        r = requests.get(url, headers=headers, params={"ref": branch})
+        r = requests.patch(url, headers=headers, json={"files": {"pitcher_data.json": {"content": payload}}})
         if r.status_code == 200:
-            sha = r.json().get("sha")
-        body = {"message": "Update pitcher data", "content": encoded, "branch": branch}
-        if sha:
-            body["sha"] = sha
-        r = requests.put(url, headers=headers, json=body)
-        if r.status_code in (200, 201):
             return  # success
-        # fall through to local on failure
 
     # ── Local fallback ──
     for path in [DATA_FILE, Path("/tmp/pitcher_data.json")]:
@@ -335,17 +325,19 @@ def save_data(data):
             continue
 
 def load_data():
-    token, repo, branch, filepath = _gh_cfg()
+    token, gist_id = _gh_cfg()
 
-    # ── GitHub load ──
-    if token and repo:
-        url = f"https://api.github.com/repos/{repo}/contents/{filepath}"
+    # ── Gist load ──
+    if token and gist_id:
+        url = f"https://api.github.com/gists/{gist_id}"
         headers = {"Authorization": f"token {token}", "Accept": "application/vnd.github.v3+json"}
-        r = requests.get(url, headers=headers, params={"ref": branch})
+        r = requests.get(url, headers=headers)
         if r.status_code == 200:
             try:
-                raw = base64.b64decode(r.json()["content"]).decode()
-                return _migrate(json.loads(raw))
+                raw = r.json()["files"]["pitcher_data.json"]["content"]
+                data = json.loads(raw)
+                if data:  # non-empty → migrate and return
+                    return _migrate(data)
             except Exception:
                 pass
 
